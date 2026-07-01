@@ -748,3 +748,246 @@ input[type='search'] {
     box-shadow: 0 0 0.8rem rgba(255, 215, 0, 0.45);
   }
 }
+
+/* Words study library */
+.words-page {
+  --word-bg: #080b14;
+  --word-surface: rgba(15, 20, 35, 0.86);
+  --word-line: rgba(212, 180, 108, 0.24);
+  --word-gold: #e7c16d;
+  --word-blue: #91bfff;
+  --word-violet: #b9a7ff;
+  --word-text: #f7f1df;
+  --word-muted: #c8c0ad;
+  color: var(--word-text);
+  border-radius: 24px;
+}
+
+.words-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(145, 191, 255, 0.18), transparent 32rem),
+    radial-gradient(circle at 78% 20%, rgba(185, 167, 255, 0.14), transparent 30rem),
+    radial-gradient(circle at 50% 88%, rgba(231, 193, 109, 0.1), transparent 26rem),
+    #080b14;
+}
+
+.words-page .card {
+  background: linear-gradient(145deg, rgba(18, 24, 42, 0.94), rgba(8, 11, 20, 0.9));
+  border-color: var(--word-line);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.words-page .kicker,
+.words-page p,
+.words-page li,
+.words-page dd {
+  color: var(--word-muted);
+}
+
+.words-hero {
+  overflow: hidden;
+  position: relative;
+  padding: clamp(1.5rem, 4vw, 3.4rem);
+}
+
+.words-hero::after {
+  content: "";
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  right: -8rem;
+  top: -10rem;
+  background: radial-gradient(circle, rgba(231, 193, 109, 0.22), transparent 68%);
+  pointer-events: none;
+}
+
+.words-hero h2 {
+  margin: 0.5rem 0 0;
+  font-size: clamp(2.3rem, 7vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.words-subtitle,
+.hero-translation {
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  max-width: 48rem;
+}
+
+.genesis-word-section {
+  margin-top: 1rem;
+}
+
+.genesis-word-section h3,
+.word-study-section h3 {
+  color: var(--word-text);
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.hebrew-verse,
+.hero-hebrew,
+.word-hebrew,
+.breakdown-hebrew,
+.root-display {
+  font-family: "SBL Hebrew", "Ezra SIL", "Times New Roman", serif;
+}
+
+.hebrew-verse {
+  margin: 1rem 0 1.25rem;
+  padding: 1.1rem;
+  border: 1px solid rgba(231, 193, 109, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #fff8df;
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  line-height: 1.65;
+  text-align: center;
+  text-shadow: 0 0 26px rgba(231, 193, 109, 0.28);
+}
+
+.word-path {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.8rem;
+}
+
+.word-path-card {
+  display: grid;
+  gap: 0.25rem;
+  min-height: 11rem;
+  padding: 1rem;
+  text-decoration: none;
+  border: 1px solid rgba(231, 193, 109, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.word-path-card.is-available:hover,
+.word-path-card.is-available:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(231, 193, 109, 0.72);
+  box-shadow: 0 14px 32px rgba(231, 193, 109, 0.13);
+}
+
+.word-path-card.is-locked {
+  opacity: 0.64;
+}
+
+.word-order,
+.word-status {
+  color: var(--word-gold);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.word-hebrew {
+  color: #fff6d8;
+  direction: rtl;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.word-translation {
+  color: var(--word-muted);
+}
+
+.word-study-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.word-detail-hero {
+  text-align: center;
+}
+
+.hero-hebrew {
+  color: #fff7dc;
+  direction: rtl;
+  font-size: clamp(4rem, 15vw, 9rem) !important;
+  text-shadow: 0 0 18px rgba(231, 193, 109, 0.34), 0 0 50px rgba(145, 191, 255, 0.15);
+}
+
+.word-glance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.word-glance-grid dt {
+  color: var(--word-gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.word-glance-grid dd {
+  margin: 0.15rem 0 0;
+  font-size: 1.05rem;
+}
+
+.breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 0.85rem;
+}
+
+.breakdown-card {
+  padding: 1rem;
+  border: 1px solid rgba(145, 191, 255, 0.18);
+  border-radius: 16px;
+  background: rgba(145, 191, 255, 0.055);
+}
+
+.breakdown-card h4 {
+  margin: 0 0 0.5rem;
+  color: #fff8df;
+  font-size: 2rem;
+}
+
+.root-display {
+  color: #fff8df !important;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin: 0 0 0.75rem;
+}
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.pill-list li {
+  border: 1px solid rgba(231, 193, 109, 0.24);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  background: rgba(231, 193, 109, 0.08);
+}
+
+.linguistic-section { border-left: 3px solid rgba(145, 191, 255, 0.5); }
+.reflection-section { border-left: 3px solid rgba(231, 193, 109, 0.52); }
+.meditation-section { border-left: 3px solid rgba(185, 167, 255, 0.58); }
+
+.reflection-questions {
+  display: grid;
+  gap: 0.6rem;
+}
+
+@media (max-width: 700px) {
+  .words-page {
+    border-radius: 0;
+  }
+
+  .word-path-card {
+    min-height: auto;
+  }
+}
