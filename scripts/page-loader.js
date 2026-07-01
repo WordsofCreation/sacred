@@ -53,6 +53,10 @@ async function loadPageScripts() {
     await import(versioned('../js/sacred-study.js'));
   }
 
+  if (document.body?.dataset?.page === 'words') {
+    await import(versioned('../assets/js/words.js'));
+  }
+
 }
 
 (async function bootstrap() {
