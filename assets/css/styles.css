@@ -991,3 +991,61 @@ input[type='search'] {
     min-height: auto;
   }
 }
+
+.word-occurrence-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.word-occurrence-item::marker {
+  color: var(--word-gold);
+}
+
+.word-occurrence-link {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(231, 193, 109, 0.22);
+  border-radius: 16px;
+  background: rgba(231, 193, 109, 0.06);
+  color: var(--word-text);
+  text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.word-occurrence-link:hover,
+.word-occurrence-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(231, 193, 109, 0.72);
+  background: rgba(231, 193, 109, 0.1);
+}
+
+.word-occurrence-reference {
+  color: var(--word-gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.word-occurrence-form,
+.word-occurrence-context {
+  direction: rtl;
+  font-family: "SBL Hebrew", "Ezra SIL", "Times New Roman", serif;
+  text-align: right;
+}
+
+.word-occurrence-form {
+  color: #fff8df;
+  font-size: 1.8rem;
+}
+
+.word-occurrence-context {
+  color: var(--word-muted);
+  font-size: 1.25rem;
+}
+
+.word-occurrence-note {
+  margin: 0.45rem 0 0;
+}

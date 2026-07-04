@@ -445,3 +445,15 @@ body.zen-mode .reader-page {
     justify-self: end;
   }
 }
+
+.verse-word-highlight {
+  border-radius: 0.25em;
+  padding: 0 0.12em;
+  background: rgba(214, 164, 57, 0.26);
+  color: inherit;
+}
+
+.verse-word-highlight--target {
+  background: rgba(214, 164, 57, 0.46);
+  box-shadow: 0 0 0 0.16em rgba(214, 164, 57, 0.18);
+}

@@ -41,6 +41,18 @@ export const wordStudies = [
       { form: 'רֵאשִׁית', sense: 'beginning, first, firstfruits, choicest part' },
       { form: 'בְּרֵאשִׁית', sense: 'the opening word of Genesis' },
     ],
+    occurrences: [
+      {
+        form: 'בְּרֵאשִׁית',
+        reference: 'Genesis 1:1',
+        book: 'genesis',
+        chapter: 1,
+        verse: 1,
+        occurrence: 1,
+        context: 'בְּרֵאשִׁית בָּרָא אֱלֹהִים',
+        note: 'The first word of the main Hebrew text.',
+      },
+    ],
     spiritualThemes: [
       'God precedes the beginning.',
       'Creation begins with order, not accident.',
@@ -93,6 +105,18 @@ export const wordStudies = [
       { form: 'בָּרָא', sense: 'he created; used in Genesis 1:1 for God’s creation of the heavens and earth' },
       { form: 'וַיִּבְרָא', sense: 'and he created; repeated in Genesis 1 for living creatures and humankind' },
       { form: 'בְּרָא', sense: 'create; used in prayer and prophetic language for divine renewal and restoration' },
+    ],
+    occurrences: [
+      {
+        form: 'בָּרָא',
+        reference: 'Genesis 1:1',
+        book: 'genesis',
+        chapter: 1,
+        verse: 1,
+        occurrence: 1,
+        context: 'בְּרֵאשִׁית בָּרָא אֱלֹהִים',
+        note: 'The verb in the opening sentence of the main Hebrew text.',
+      },
     ],
     spiritualThemes: [
       'God is the subject of the first verb in Scripture.',

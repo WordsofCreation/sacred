@@ -46,6 +46,40 @@ function list(items, className = '') {
   return ul;
 }
 
+function getOccurrenceUrl(occurrence) {
+  const params = new URLSearchParams({
+    book: occurrence.book,
+    chapter: String(occurrence.chapter),
+    verse: String(occurrence.verse),
+    word: occurrence.form,
+    occurrence: String(occurrence.occurrence || 1),
+  });
+
+  return `../../hebrew-bible/?${params.toString()}`;
+}
+
+function occurrenceList(occurrences = []) {
+  const listElement = el('ol', 'word-occurrence-list');
+
+  occurrences.forEach((occurrence) => {
+    const item = el('li', 'word-occurrence-item');
+    const link = el('a', 'word-occurrence-link');
+    link.href = getOccurrenceUrl(occurrence);
+    link.append(el('span', 'word-occurrence-reference', occurrence.reference));
+    link.append(el('span', 'word-occurrence-form', occurrence.form));
+    link.append(el('span', 'word-occurrence-context', occurrence.context));
+    item.append(link);
+
+    if (occurrence.note) {
+      item.append(el('p', 'word-occurrence-note', occurrence.note));
+    }
+
+    listElement.append(item);
+  });
+
+  return listElement;
+}
+
 function renderDetail() {
   const root = document.getElementById('word-study-root');
   if (!root) return;
@@ -97,6 +131,13 @@ function renderDetail() {
 
   const usage = study.biblicalUsage.map((item) => `${item.form} — ${item.sense}`);
   root.append(studySection('Biblical Usage', [list(usage), el('p', null, study.usageNote || 'This page is the first step in tracing the word family through Scripture.')], 'linguistic-section'));
+
+  if (study.occurrences?.length) {
+    root.append(studySection('Occurrences in the Main Text', [
+      occurrenceList(study.occurrences),
+      el('p', null, 'Each occurrence opens the reader at the verse where this exact use appears and highlights the word in the Hebrew text.'),
+    ], 'linguistic-section word-occurrences-section'));
+  }
 
   root.append(studySection('Spiritual Considerations', [
     ...(study.spiritualIntro || [
