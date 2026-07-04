@@ -35,6 +35,7 @@ function getDeepLinkState() {
   const chapter = safeParsePositiveInteger(params.get('chapter'));
   const verse = safeParsePositiveInteger(params.get('verse'));
   const reference = params.get('reference');
+  const search = params.get('search');
   const word = params.get('word');
   const occurrence = safeParsePositiveInteger(params.get('occurrence')) || 1;
 
@@ -43,6 +44,7 @@ function getDeepLinkState() {
     chapter,
     verse,
     reference,
+    search,
     word,
     occurrence,
   };
@@ -798,7 +800,12 @@ async function initializeReaderPage() {
       verseOverride: deepLink.verse,
     });
 
-    void ensureSearchIndex();
+    if (deepLink.search) {
+      searchInput.value = deepLink.search;
+      await navigateByQuery(deepLink.search, { preferReferenceOnly: false });
+    } else {
+      void ensureSearchIndex();
+    }
   } catch (error) {
     state.setState({ error });
     renderStatus(statusElement, `Unable to load Hebrew Bible data: ${error.message}`, 'error');

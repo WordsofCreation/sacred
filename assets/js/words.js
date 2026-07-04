@@ -1,4 +1,6 @@
 import { genesisOneOneWords, getWordStudy } from '../../src/data/wordStudies.js';
+import { createHebrewBibleDataLayer } from '../../src/data/hebrewBible/index.js';
+import { buildSearchIndex, runSearchQuery } from '../../src/search/hebrewBible/index.js';
 
 function el(tag, className, text) {
   const node = document.createElement(tag);
@@ -58,6 +60,130 @@ function getOccurrenceUrl(occurrence) {
   return `../../hebrew-bible/?${params.toString()}`;
 }
 
+function formatResultReference(result) {
+  return `${result.bookEnglish || result.bookSlug} ${result.chapter}:${result.verse}`;
+}
+
+function getSearchResultUrl(result, query) {
+  const params = new URLSearchParams({
+    book: String(result.bookSlug || ''),
+    chapter: String(result.chapter || ''),
+    verse: String(result.verse || ''),
+  });
+
+  if (query) {
+    params.set('word', query);
+  }
+
+  return `../../hebrew-bible/?${params.toString()}`;
+}
+
+function renderWordSearchResults(listElement, results = [], query = '') {
+  listElement.innerHTML = '';
+
+  if (!results.length) {
+    return;
+  }
+
+  results.forEach((result) => {
+    const item = el('li', 'word-search-result-item');
+    const link = el('a', 'word-search-result-link');
+    link.href = getSearchResultUrl(result, query);
+    link.append(el('span', 'word-occurrence-reference', formatResultReference(result)));
+
+    const text = el('span', 'word-search-result-text', result.text);
+    text.dir = 'rtl';
+    text.lang = 'he';
+    link.append(text);
+    item.append(link);
+    listElement.append(item);
+  });
+}
+
+function createWordSearchSection(study) {
+  const section = studySection('Search Verse Text', [], 'linguistic-section word-search-section');
+  const form = el('form', 'word-search-form');
+  const label = el('label', null, 'Search verse text');
+  label.setAttribute('for', 'word-search-input');
+
+  const searchRow = el('div', 'word-search-row');
+  const input = document.createElement('input');
+  input.id = 'word-search-input';
+  input.name = 'search';
+  input.type = 'search';
+  input.autocomplete = 'off';
+  input.placeholder = 'Enter a Hebrew phrase or reference';
+  input.value = study.hebrew;
+
+  const button = document.createElement('button');
+  button.type = 'submit';
+  button.textContent = 'Search';
+  searchRow.append(input, button);
+
+  const scopeRow = el('div', 'word-search-row word-search-row--meta');
+  const scopeLabel = el('label', null, 'Search scope');
+  scopeLabel.setAttribute('for', 'word-search-scope');
+  const scope = document.createElement('select');
+  scope.id = 'word-search-scope';
+  scope.name = 'scope';
+  const option = document.createElement('option');
+  option.value = 'all';
+  option.textContent = 'All books';
+  scope.append(option);
+  scopeRow.append(scopeLabel, scope);
+
+  form.append(label, searchRow, scopeRow);
+
+  const summary = el('p', 'word-search-summary', `Searching all books for “${study.hebrew}”…`);
+  const results = el('ul', 'word-search-results');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const params = new URLSearchParams({ search: input.value.trim() || study.hebrew });
+    window.location.href = `../../hebrew-bible/?${params.toString()}`;
+  });
+
+  section.append(form, summary, results);
+  return { section, input, summary, results };
+}
+
+async function loadWordSearchResults(study, controls) {
+  try {
+    const dataLayer = createHebrewBibleDataLayer({ basePath: '../..' });
+    const [books, verses] = await Promise.all([dataLayer.getAllBooks(), dataLayer.getAllVerses()]);
+    const searchIndex = buildSearchIndex(verses);
+    const searchPayload = runSearchQuery({
+      query: study.hebrew,
+      books,
+      searchIndex,
+      options: { searchScope: 'all' },
+    });
+    const results = searchPayload.textResults;
+
+    renderWordSearchResults(controls.results, results, study.hebrew);
+    controls.summary.textContent = results.length
+      ? `${results.length} occurrence${results.length === 1 ? '' : 's'} for “${study.hebrew}” in all books.`
+      : `No occurrences found for “${study.hebrew}” in all books.`;
+  } catch (error) {
+    const fallback = study.occurrences || [];
+    controls.summary.textContent = fallback.length
+      ? `${fallback.length} curated occurrence${fallback.length === 1 ? '' : 's'} for “${study.hebrew}”.`
+      : 'Unable to load occurrence search results right now.';
+    controls.results.innerHTML = '';
+    fallback.forEach((occurrence) => {
+      const item = el('li', 'word-search-result-item');
+      const link = el('a', 'word-search-result-link');
+      link.href = getOccurrenceUrl(occurrence);
+      link.append(el('span', 'word-occurrence-reference', occurrence.reference));
+      const text = el('span', 'word-search-result-text', occurrence.context);
+      text.dir = 'rtl';
+      text.lang = 'he';
+      link.append(text);
+      item.append(link);
+      controls.results.append(item);
+    });
+  }
+}
+
 function occurrenceList(occurrences = []) {
   const listElement = el('ol', 'word-occurrence-list');
 
@@ -80,7 +206,7 @@ function occurrenceList(occurrences = []) {
   return listElement;
 }
 
-function renderDetail() {
+async function renderDetail() {
   const root = document.getElementById('word-study-root');
   if (!root) return;
   const study = getWordStudy(document.body.dataset.wordSlug);
@@ -131,6 +257,10 @@ function renderDetail() {
 
   const usage = study.biblicalUsage.map((item) => `${item.form} — ${item.sense}`);
   root.append(studySection('Biblical Usage', [list(usage), el('p', null, study.usageNote || 'This page is the first step in tracing the word family through Scripture.')], 'linguistic-section'));
+
+  const wordSearch = createWordSearchSection(study);
+  root.append(wordSearch.section);
+  await loadWordSearchResults(study, wordSearch);
 
   if (study.occurrences?.length) {
     root.append(studySection('Occurrences in the Main Text', [
