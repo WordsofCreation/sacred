@@ -35,12 +35,16 @@ function getDeepLinkState() {
   const chapter = safeParsePositiveInteger(params.get('chapter'));
   const verse = safeParsePositiveInteger(params.get('verse'));
   const reference = params.get('reference');
+  const word = params.get('word');
+  const occurrence = safeParsePositiveInteger(params.get('occurrence')) || 1;
 
   return {
     book,
     chapter,
     verse,
     reference,
+    word,
+    occurrence,
   };
 }
 
@@ -106,7 +110,8 @@ function focusVerse(versesList, verseNumber) {
     return;
   }
 
-  const target = versesList.querySelector(`[data-verse="${verseNumber}"]`);
+  const wordTarget = versesList.querySelector('#word-occurrence-target');
+  const target = wordTarget || versesList.querySelector(`[data-verse="${verseNumber}"]`);
 
   if (target) {
     target.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -627,6 +632,8 @@ async function initializeReaderPage() {
       renderVerses(versesList, verses, targetVerse, {
         displayMode: activeState.displayMode,
         diagnosticsByVerse: mergedChapter.diagnosticsByVerse,
+        highlightedWord: deepLink.word,
+        highlightedOccurrence: deepLink.occurrence,
       });
 
       if (mergedChapter.hasMismatch) {

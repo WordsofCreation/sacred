@@ -81,11 +81,51 @@ function shouldRenderEnglish(displayMode) {
   return displayMode === 'english' || displayMode === 'parallel';
 }
 
+function renderHighlightedHebrewText(container, text, targetWord, targetOccurrence = 1) {
+  if (!targetWord) {
+    container.textContent = text;
+    return;
+  }
+
+  const words = text.split(/(\s+)/);
+  let matchCount = 0;
+
+  words.forEach((part) => {
+    if (!part) return;
+
+    if (/^\s+$/.test(part)) {
+      container.append(document.createTextNode(part));
+      return;
+    }
+
+    const normalizedPart = part.replace(/[׃.,;!?]/g, '');
+
+    if (normalizedPart === targetWord) {
+      matchCount += 1;
+      const wordElement = document.createElement('mark');
+      wordElement.className = 'verse-word-highlight';
+
+      if (matchCount === Number(targetOccurrence || 1)) {
+        wordElement.id = 'word-occurrence-target';
+        wordElement.classList.add('verse-word-highlight--target');
+      }
+
+      wordElement.textContent = part;
+      container.append(wordElement);
+      return;
+    }
+
+    container.append(document.createTextNode(part));
+  });
+}
+
 function renderVerses(listElement, verses, highlightedVerse = null, options = {}) {
   listElement.innerHTML = '';
 
   const displayMode = options.displayMode || 'parallel';
   const diagnosticsByVerse = options.diagnosticsByVerse || new Map();
+  const highlightedWord = options.highlightedWord || null;
+  const highlightedOccurrence = options.highlightedOccurrence || 1;
 
   for (const verse of verses) {
     const verseElement = document.createElement('li');
@@ -108,7 +148,12 @@ function renderVerses(listElement, verses, highlightedVerse = null, options = {}
       verseText.className = 'verse-text';
       verseText.setAttribute('dir', 'rtl');
       verseText.setAttribute('lang', 'he');
-      verseText.textContent = getHebrewText(verse);
+      renderHighlightedHebrewText(
+        verseText,
+        getHebrewText(verse),
+        highlightedVerse && Number(verse.verse) === Number(highlightedVerse) ? highlightedWord : null,
+        highlightedOccurrence,
+      );
       verseTextGroup.append(verseText);
     }
 
