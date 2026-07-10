@@ -1,7 +1,7 @@
 export const genesisOneOneWords = [
   { order: 1, hebrew: 'בְּרֵאשִׁית', translation: 'In the beginning', slug: 'bereshit', available: true },
   { order: 2, hebrew: 'בָּרָא', translation: 'He created', slug: 'bara', available: true },
-  { order: 3, hebrew: 'אֱלֹהִים', translation: 'God', available: false },
+  { order: 3, hebrew: 'אֱלֹהִים', translation: 'God', slug: 'elohim', available: true },
   { order: 4, hebrew: 'אֵת', translation: 'Direct object marker / Aleph-Tav', available: false },
   { order: 5, hebrew: 'הַשָּׁמַיִם', translation: 'The heavens', available: false },
   { order: 6, hebrew: 'וְאֵת', translation: 'And the direct object marker / And Aleph-Tav', available: false },
@@ -157,6 +157,97 @@ export const wordStudies = [
       'How does the idea of new creation in Messiah connect Genesis 1:1 to redemption?',
     ],
   },
+
+  {
+    slug: 'elohim',
+    hebrew: 'אֱלֹהִים',
+    transliteration: 'Elohim',
+    pronunciation: 'eh-loh-HEEM',
+    passage: 'Genesis 1:1',
+    basicTranslation: 'God',
+    literalSense: 'God / gods / mighty ones, according to context',
+    root: 'אלה / אל',
+    rootTransliteration: 'eloah / el',
+    rootMeaning: 'God, deity, mighty one, strength, power',
+    grammar: 'אֱלֹהִים is a masculine plural-form noun. In Genesis 1:1 it takes the singular verb בָּרָא, so the phrase identifies the one God as the Creator: “God created.”',
+    spiritualTheme: 'The Creator named in the opening sentence is אֱלֹהִים: the mighty God whose power orders creation and whose majesty stands before all things.',
+    relatedVerses: ['Genesis 1:1', 'Genesis 1:26', 'Deuteronomy 6:4', 'Psalm 82:1', 'Isaiah 45:18', 'John 1:1'],
+    breakdown: [
+      {
+        part: 'אֱ',
+        meaning: 'aleph with reduced vowel sound',
+        function: 'The opening letter begins the divine title and carries the word into its first syllable.',
+      },
+      {
+        part: 'לֹה',
+        meaning: 'lamed-he sequence within the אלה word family',
+        function: 'The central sound connects the word with the language of deity, might, and divine identity.',
+      },
+      {
+        part: 'ִים',
+        meaning: 'masculine plural ending',
+        connectedIdea: 'Although the form is plural, Genesis 1:1 pairs it with a singular verb when speaking of the one Creator God.',
+      },
+    ],
+    rootMeanings: ['God', 'deity', 'mighty one', 'strength', 'power', 'authority', 'judge'],
+    biblicalUsage: [
+      { form: 'אֱלֹהִים', sense: 'God; the divine title used for the Creator in Genesis 1:1' },
+      { form: 'אֵל', sense: 'God, mighty one, strength; a shorter related divine title' },
+      { form: 'אֱלוֹהַּ', sense: 'God; a singular form associated with the same word family' },
+      { form: 'אֱלֹהִים', sense: 'gods, heavenly beings, or judges in some contexts; meaning is determined by grammar and setting' },
+    ],
+    occurrences: [
+      {
+        form: 'אֱלֹהִים',
+        reference: 'Genesis 1:1',
+        book: 'genesis',
+        chapter: 1,
+        verse: 1,
+        occurrence: 1,
+        context: 'בָּרָא אֱלֹהִים אֵת',
+        note: 'The subject of the first verb in the main Hebrew text: God created.',
+      },
+    ],
+    spiritualThemes: [
+      'God is named before the heavens and the earth are described.',
+      'The first subject of Scripture is not creation itself, but the Creator.',
+      'The plural form with a singular verb invites reverent attention to divine majesty and unity.',
+      'אֱלֹהִים reveals creation as the work of supreme power, wisdom, and authority.',
+      'The God who creates also speaks, sees, separates, blesses, and names throughout Genesis 1.',
+    ],
+    rootStudyNote: 'אֱלֹהִים belongs to the biblical vocabulary of deity, power, and authority. The same form can be used differently across Scripture, but in Genesis 1:1 the singular verb בָּרָא makes the sense clear: the one God is the Creator.',
+    grammarNotes: [
+      'אֱלֹהִים has the form of a masculine plural noun because of the ִים ending.',
+      'In Genesis 1:1 it is paired with the singular verb בָּרָא, “he created,” not a plural verb.',
+      'Hebrew can use plural forms in divine titles or titles of majesty, while the surrounding grammar identifies whether the meaning is singular or plural.',
+      'The word follows the verb in Genesis 1:1: בָּרָא אֱלֹהִים — “God created.”',
+    ],
+    usageNote: 'אֱלֹהִים is one of the most important divine titles in the Hebrew Bible. Genesis 1 uses it repeatedly to present God as Creator, speaker, orderer, judge, and blesser of the created world.',
+    spiritualIntro: [
+      'אֱלֹהִים is the first explicit name-title for God in Scripture. After “In the beginning” and “created,” the text reveals the subject of the act: God.',
+      'The word gathers together majesty, power, authority, and divine presence. Creation does not arise from impersonal force; it comes from אֱלֹהִים, the living God who wills and orders all things.',
+    ],
+    messiahConnections: [
+      'John 1:1 — The Word was with God, and the Word was God.',
+      'John 1:3 — All things came into being through the Word.',
+      'Colossians 1:15–17 — All things were created through Him and for Him.',
+      'Hebrews 1:2–3 — God made the ages through the Son, who upholds all things.',
+    ],
+    messiahReflection: 'For Christian readers, אֱלֹהִים in Genesis 1:1 can be contemplated alongside the New Testament witness that the Word is with God and is God, and that all things are created through the Son. The Creator named at the beginning is not distant from redemption; creation and new creation meet in Messiah.',
+    meditationIntro: [
+      'This meditation is offered as contemplative reflection rather than strict grammar.',
+      'אֱלֹהִים stands in the verse as the hidden source now named. The action of creation is not anonymous; the Creator steps into the sentence as the one whose majesty precedes all worlds.',
+      'The plural shape of the word and the singular action of the verb invite contemplation of fullness and unity: abundant divine majesty expressed through one sovereign will.',
+    ],
+    reflectionQuestions: [
+      'What changes when I read Genesis 1:1 with God, not creation, as the true center of the sentence?',
+      'How does the singular verb with אֱלֹהִים shape the way I contemplate divine unity and majesty?',
+      'Where do I need to remember that creation is governed by God’s authority rather than by chaos?',
+      'How does Genesis 1 reveal God through action before any extended explanation?',
+      'How do John 1 and Colossians 1 deepen the way I read אֱלֹהִים in the beginning?',
+    ],
+  },
+
 ];
 
 export function getWordStudy(slug) {
