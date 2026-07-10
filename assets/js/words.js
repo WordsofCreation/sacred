@@ -1,4 +1,4 @@
-import { genesisOneOneWords, genesisOneTwoWords, genesisOneThreeWords, getWordStudy } from '../../src/data/wordStudies.js';
+import { genesisOneOneWords, genesisOneTwoWords, genesisOneThreeWords, genesisOneFourWords, getWordStudy } from '../../src/data/wordStudies.js';
 import { createHebrewBibleDataLayer } from '../../src/data/hebrewBible/index.js';
 import { buildSearchIndex, runSearchQuery } from '../../src/search/hebrewBible/index.js';
 
@@ -396,4 +396,5 @@ async function renderDetail() {
 renderWordPath('word-path', genesisOneOneWords);
 renderWordPath('word-path-genesis-1-2', genesisOneTwoWords);
 renderWordPath('word-path-genesis-1-3', genesisOneThreeWords);
+renderWordPath('word-path-genesis-1-4', genesisOneFourWords);
 renderDetail();
