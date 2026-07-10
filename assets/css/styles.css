@@ -1101,6 +1101,37 @@ input[type='search'] {
   margin: 0;
 }
 
+.word-search-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.word-search-pagination[hidden] {
+  display: none;
+}
+
+.word-search-pagination button {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #d4bc95;
+  border-radius: 0.65rem;
+  background: linear-gradient(to bottom, #fefaf1, #f5e8d3);
+  color: #21170a;
+  cursor: pointer;
+  font: inherit;
+}
+
+.word-search-pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.word-search-page-status {
+  margin: 0;
+  color: var(--word-muted);
+}
+
 .word-search-results {
   display: grid;
   gap: 0.8rem;
