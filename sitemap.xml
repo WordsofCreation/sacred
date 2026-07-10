@@ -56,6 +56,61 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://northwestchefs.github.io/sacred/words/vehaaretz/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/hayetah/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/tohu/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/vavohu/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/vechoshekh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/al/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/penei/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/tehom/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/veruach/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/merachefet/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/hamayim/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://northwestchefs.github.io/sacred/mitzvot/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -1,4 +1,4 @@
-import { genesisOneOneWords, getWordStudy } from '../../src/data/wordStudies.js';
+import { genesisOneOneWords, genesisOneTwoWords, getWordStudy } from '../../src/data/wordStudies.js';
 import { createHebrewBibleDataLayer } from '../../src/data/hebrewBible/index.js';
 import { buildSearchIndex, runSearchQuery } from '../../src/search/hebrewBible/index.js';
 
@@ -11,11 +11,11 @@ function el(tag, className, text) {
   return node;
 }
 
-function renderWordPath() {
-  const path = document.getElementById('word-path');
+function renderWordPath(pathId = 'word-path', words = genesisOneOneWords) {
+  const path = document.getElementById(pathId);
   if (!path) return;
 
-  genesisOneOneWords.forEach((word) => {
+  words.forEach((word) => {
     const card = word.available ? document.createElement('a') : document.createElement('article');
     card.className = `word-path-card${word.available ? ' is-available' : ' is-locked'}`;
     if (word.available) card.href = `${word.slug}/`;
@@ -393,5 +393,6 @@ async function renderDetail() {
   root.append(studySection('Reflection Questions', [list(study.reflectionQuestions, 'reflection-questions')], 'reflection-section'));
 }
 
-renderWordPath();
+renderWordPath('word-path', genesisOneOneWords);
+renderWordPath('word-path-genesis-1-2', genesisOneTwoWords);
 renderDetail();
