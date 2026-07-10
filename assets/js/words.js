@@ -2,6 +2,8 @@ import { genesisOneOneWords, getWordStudy } from '../../src/data/wordStudies.js'
 import { createHebrewBibleDataLayer } from '../../src/data/hebrewBible/index.js';
 import { buildSearchIndex, runSearchQuery } from '../../src/search/hebrewBible/index.js';
 
+const WORD_SEARCH_PAGE_SIZE = 10;
+
 function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
@@ -78,6 +80,10 @@ function getSearchResultUrl(result, query) {
   return `../../hebrew-bible/?${params.toString()}`;
 }
 
+function getBookLabel(book) {
+  return book.bookEnglish || book.book || book.slug;
+}
+
 function renderWordSearchResults(listElement, results = [], query = '') {
   listElement.innerHTML = '';
 
@@ -121,55 +127,151 @@ function createWordSearchSection(study) {
   searchRow.append(input, button);
 
   const scopeRow = el('div', 'word-search-row word-search-row--meta');
-  const scopeLabel = el('label', null, 'Search scope');
-  scopeLabel.setAttribute('for', 'word-search-scope');
-  const scope = document.createElement('select');
-  scope.id = 'word-search-scope';
-  scope.name = 'scope';
+  const scopeLabel = el('label', null, 'Book');
+  scopeLabel.setAttribute('for', 'word-search-book');
+  const bookSelect = document.createElement('select');
+  bookSelect.id = 'word-search-book';
+  bookSelect.name = 'book';
   const option = document.createElement('option');
   option.value = 'all';
   option.textContent = 'All books';
-  scope.append(option);
-  scopeRow.append(scopeLabel, scope);
+  bookSelect.append(option);
+  scopeRow.append(scopeLabel, bookSelect);
 
   form.append(label, searchRow, scopeRow);
 
   const summary = el('p', 'word-search-summary', `Searching all books for “${study.hebrew}”…`);
+  const pagination = el('div', 'word-search-pagination');
+  pagination.hidden = true;
+  const previousButton = document.createElement('button');
+  previousButton.type = 'button';
+  previousButton.textContent = 'Previous';
+  const pageStatus = el('p', 'word-search-page-status');
+  pageStatus.setAttribute('aria-live', 'polite');
+  const nextButton = document.createElement('button');
+  nextButton.type = 'button';
+  nextButton.textContent = 'Next';
+  pagination.append(previousButton, pageStatus, nextButton);
   const results = el('ul', 'word-search-results');
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const params = new URLSearchParams({ search: input.value.trim() || study.hebrew });
-    window.location.href = `../../hebrew-bible/?${params.toString()}`;
-  });
 
-  section.append(form, summary, results);
-  return { section, input, summary, results };
+  section.append(form, summary, pagination, results);
+  return { section, input, bookSelect, summary, pagination, previousButton, nextButton, pageStatus, results, form };
+}
+
+function populateWordSearchBooks(select, books = []) {
+  books.forEach((book) => {
+    const option = document.createElement('option');
+    option.value = book.slug;
+    option.textContent = getBookLabel(book);
+    select.append(option);
+  });
+}
+
+function getSelectedBook(books = [], selectedSlug = 'all') {
+  if (!selectedSlug || selectedSlug === 'all') {
+    return null;
+  }
+
+  return books.find((book) => book.slug === selectedSlug) || null;
+}
+
+function getWordSearchScopeLabel(book) {
+  return book ? getBookLabel(book) : 'all books';
+}
+
+function renderWordSearchPagination(controls, totalResults, currentPage) {
+  const totalPages = Math.max(1, Math.ceil(totalResults / WORD_SEARCH_PAGE_SIZE));
+
+  if (!totalResults || totalResults <= WORD_SEARCH_PAGE_SIZE) {
+    controls.pagination.hidden = true;
+    controls.previousButton.disabled = true;
+    controls.nextButton.disabled = true;
+    controls.pageStatus.textContent = '';
+    return;
+  }
+
+  controls.pagination.hidden = false;
+  controls.previousButton.disabled = currentPage <= 1;
+  controls.nextButton.disabled = currentPage >= totalPages;
+  controls.pageStatus.textContent = `Page ${currentPage} of ${totalPages}`;
+}
+
+function renderWordSearchPage(controls, state) {
+  const totalResults = state.results.length;
+  const totalPages = Math.max(1, Math.ceil(totalResults / WORD_SEARCH_PAGE_SIZE));
+  state.currentPage = Math.min(Math.max(1, state.currentPage), totalPages);
+  const start = (state.currentPage - 1) * WORD_SEARCH_PAGE_SIZE;
+  const pageResults = state.results.slice(start, start + WORD_SEARCH_PAGE_SIZE);
+
+  renderWordSearchResults(controls.results, pageResults, state.query);
+  renderWordSearchPagination(controls, totalResults, state.currentPage);
+}
+
+function updateWordSearchSummary(summary, { query, totalResults, scopeLabel }) {
+  summary.textContent = totalResults
+    ? `${totalResults} occurrence${totalResults === 1 ? '' : 's'} for “${query}” in ${scopeLabel}. Showing ${WORD_SEARCH_PAGE_SIZE} per page.`
+    : `No occurrences found for “${query}” in ${scopeLabel}.`;
 }
 
 async function loadWordSearchResults(study, controls) {
   try {
     const dataLayer = createHebrewBibleDataLayer({ basePath: '../..' });
     const [books, verses] = await Promise.all([dataLayer.getAllBooks(), dataLayer.getAllVerses()]);
+    populateWordSearchBooks(controls.bookSelect, books);
     const searchIndex = buildSearchIndex(verses);
-    const searchPayload = runSearchQuery({
+    const state = {
       query: study.hebrew,
-      books,
-      searchIndex,
-      options: { searchScope: 'all' },
-    });
-    const results = searchPayload.textResults;
+      results: [],
+      currentPage: 1,
+    };
 
-    renderWordSearchResults(controls.results, results, study.hebrew);
-    controls.summary.textContent = results.length
-      ? `${results.length} occurrence${results.length === 1 ? '' : 's'} for “${study.hebrew}” in all books.`
-      : `No occurrences found for “${study.hebrew}” in all books.`;
+    const runSearch = () => {
+      const query = controls.input.value.trim() || study.hebrew;
+      const selectedBook = getSelectedBook(books, controls.bookSelect.value);
+      const searchPayload = runSearchQuery({
+        query,
+        books,
+        searchIndex,
+        options: {
+          searchScope: selectedBook ? 'current' : 'all',
+          selectedBookSlug: selectedBook?.slug || null,
+        },
+      });
+
+      state.query = query;
+      state.results = searchPayload.textResults;
+      state.currentPage = 1;
+      updateWordSearchSummary(controls.summary, {
+        query,
+        totalResults: state.results.length,
+        scopeLabel: getWordSearchScopeLabel(selectedBook),
+      });
+      renderWordSearchPage(controls, state);
+    };
+
+    controls.form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      runSearch();
+    });
+    controls.bookSelect.addEventListener('change', runSearch);
+    controls.previousButton.addEventListener('click', () => {
+      state.currentPage -= 1;
+      renderWordSearchPage(controls, state);
+    });
+    controls.nextButton.addEventListener('click', () => {
+      state.currentPage += 1;
+      renderWordSearchPage(controls, state);
+    });
+
+    runSearch();
   } catch (error) {
     const fallback = study.occurrences || [];
     controls.summary.textContent = fallback.length
       ? `${fallback.length} curated occurrence${fallback.length === 1 ? '' : 's'} for “${study.hebrew}”.`
       : 'Unable to load occurrence search results right now.';
     controls.results.innerHTML = '';
-    fallback.forEach((occurrence) => {
+    controls.pagination.hidden = true;
+    fallback.slice(0, WORD_SEARCH_PAGE_SIZE).forEach((occurrence) => {
       const item = el('li', 'word-search-result-item');
       const link = el('a', 'word-search-result-link');
       link.href = getOccurrenceUrl(occurrence);
