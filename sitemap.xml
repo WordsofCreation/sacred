@@ -216,6 +216,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://northwestchefs.github.io/sacred/words/raqia/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/betokh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/vihi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/mavdil/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/mayim/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/lamayim/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://northwestchefs.github.io/sacred/mitzvot/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
