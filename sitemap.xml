@@ -386,6 +386,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://northwestchefs.github.io/sacred/words/vatotse/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/leminehu/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/veetz/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/oseh-peri/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://northwestchefs.github.io/sacred/words/shelishi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://northwestchefs.github.io/sacred/mitzvot/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
