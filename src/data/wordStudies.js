@@ -99,6 +99,19 @@ export const genesisOneSevenWords = [
   { order: 15, hebrew: 'וַיְהִי־כֵן', translation: 'And it was so', slug: 'vayehi-khen', available: true },
 ];
 
+
+
+export const genesisOneEightWords = [
+  { order: 1, hebrew: 'וַיִּקְרָא', translation: 'And He called', slug: 'vayiqra', available: true },
+  { order: 2, hebrew: 'אֱלֹהִים', translation: 'God', slug: 'elohim', available: true },
+  { order: 3, hebrew: 'לָרָקִיעַ', translation: 'To the expanse', slug: 'laraqia', available: true },
+  { order: 4, hebrew: 'שָׁמָיִם', translation: 'Heaven / heavens', slug: 'shamayim', available: true },
+  { order: 5, hebrew: 'וַיְהִי־עֶרֶב', translation: 'And there was evening', slug: 'vayehi-erev', available: true },
+  { order: 6, hebrew: 'וַיְהִי־בֹקֶר', translation: 'And there was morning', slug: 'vayehi-boqer', available: true },
+  { order: 7, hebrew: 'יוֹם', translation: 'Day', slug: 'yom', available: true },
+  { order: 8, hebrew: 'שֵׁנִי', translation: 'Second', slug: 'sheni', available: true },
+];
+
 export const wordStudies = [
   {
     slug: 'bereshit',
@@ -1839,6 +1852,65 @@ export const wordStudies = [
     meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'Genesis 1:7 can become a prayer for God to make real what He has spoken and to place every depth, height, and boundary within His peace.'],
     reflectionQuestions: ['How does this word show command becoming completion?', 'What boundary or relation does God establish here?', 'Where do I need ordered space rather than confusion?', 'How does the expanse prepare for the naming of heaven?', 'How does Messiah as sustaining Word deepen this scene?'],
   },
+
+  {
+    slug: 'shamayim',
+    hebrew: 'שָׁמָיִם',
+    transliteration: 'Shamayim',
+    pronunciation: 'sha-MAI-yeem',
+    passage: 'Genesis 1:8',
+    basicTranslation: 'Heaven / heavens',
+    literalSense: 'Sky / heavens',
+    root: 'שמים',
+    rootTransliteration: 'shamayim',
+    rootMeaning: 'heavens, sky, upper realm',
+    grammar: 'שָׁמָיִם is a plural or dual-form noun. In Genesis 1:8 it is the name God gives to the expanse, marking the newly ordered upper space as heaven or sky.',
+    spiritualTheme: 'God does not only separate the waters; He names the expanse and gives the ordered sky its place in creation.',
+    relatedVerses: ['Genesis 1:1', 'Genesis 1:8', 'Psalm 19:1', 'Psalm 148:4', 'Matthew 6:9', 'Colossians 1:16'],
+    breakdown: [{ part: 'שָׁמָיִם', meaning: 'Heaven / heavens / sky', function: 'The name God gives to the expanse in Genesis 1:8.' }],
+    rootMeanings: ['heavens', 'sky', 'height', 'created upper realm', 'place of divine display'],
+    biblicalUsage: [{ form: 'שָׁמָיִם', sense: 'Heaven or sky; in Genesis 1:8, the name of the expanse.' }],
+    occurrences: [{ form: 'שָׁמָיִם', reference: 'Genesis 1:8', book: 'genesis', chapter: 1, verse: 8, occurrence: 1, context: 'וַיִּקְרָא אֱלֹהִים לָרָקִיעַ שָׁמָיִם', note: 'God names the expanse heaven after separating waters from waters.' }],
+    spiritualThemes: ['God names what He orders.', 'Heaven is created, not ultimate in itself.', 'The sky becomes a sign of ordered space and divine generosity.', 'Genesis 1:8 completes the second day scene begun in Genesis 1:6.', 'The heavens invite awe while directing worship to the Creator.'],
+    rootStudyNote: 'שָׁמָיִם in Genesis 1:8 should be read in relation to רָקִיעַ, the expanse. The verse identifies the expanse by name without turning the created heavens into a rival to God.',
+    grammarNotes: ['The form is often described as plural or dual in shape.', 'In Genesis 1:8 it follows the naming formula וַיִּקְרָא אֱלֹהִים לָרָקִיעַ.', 'It is related to הַשָּׁמַיִם in Genesis 1:1, but appears here without the definite article.'],
+    usageNote: 'Across Scripture, שָׁמָיִם can refer to the sky, the heavens, or the elevated realm associated with God’s rule; Genesis 1:8 anchors the word in creation.',
+    spiritualIntro: ['Genesis 1:8 turns separated space into named space: the expanse is called heaven.', 'The word invites reverence, but also humility, because even the heavens belong to the made order.'],
+    messiahConnections: ['John 1:3 — All things came into being through the Word.', 'Colossians 1:16 — Things in heaven and on earth are created through and for the Son.', 'Hebrews 1:10 — The heavens are the work of the Lord’s hands.'],
+    messiahReflection: 'For Christian readers, שָׁמָיִם can be contemplated alongside the confession that heavenly and earthly things are created through Messiah and held under His lordship.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'שָׁמָיִם can become a contemplative word for spaciousness: God makes room above, names it, and fills creation with ordered height.'],
+    reflectionQuestions: ['How does God’s naming of heaven shape my sense of creation?', 'Where do I confuse the heavens with the Creator?', 'How does the sky invite worship rather than escape?', 'What does ordered space teach me about God’s care?', 'How does Messiah’s lordship over heaven and earth deepen this word?'],
+  },
+
+  {
+    slug: 'sheni',
+    hebrew: 'שֵׁנִי',
+    transliteration: 'Sheni',
+    pronunciation: 'sheh-NEE',
+    passage: 'Genesis 1:8',
+    basicTranslation: 'Second',
+    literalSense: 'Second / the second one',
+    root: 'שנה',
+    rootTransliteration: 'shanah',
+    rootMeaning: 'to repeat, do again; second',
+    grammar: 'שֵׁנִי is an ordinal adjective meaning “second.” In Genesis 1:8 it completes the day formula: יוֹם שֵׁנִי, “a second day” or “the second day.”',
+    spiritualTheme: 'The second day shows creation moving in ordered sequence: evening, morning, and a named day under God’s command.',
+    relatedVerses: ['Genesis 1:8', 'Genesis 2:2', 'Exodus 20:11', 'Psalm 104:2–3', 'Mark 2:27', 'Hebrews 4:4'],
+    breakdown: [{ part: 'שֵׁנִי', meaning: 'Second', function: 'Ordinal adjective identifying the second day of the creation sequence.' }],
+    rootMeanings: ['second', 'repetition', 'sequence', 'another', 'ordered numbering'],
+    biblicalUsage: [{ form: 'שֵׁנִי', sense: 'Second; in Genesis 1:8, the second day.' }],
+    occurrences: [{ form: 'שֵׁנִי', reference: 'Genesis 1:8', book: 'genesis', chapter: 1, verse: 8, occurrence: 1, context: 'וַיְהִי־בֹקֶר יוֹם שֵׁנִי', note: 'The closing word of Genesis 1:8 names the day as second.' }],
+    spiritualThemes: ['God’s work unfolds in sequence.', 'The second day continues the rhythm of evening and morning.', 'Numbered days teach patience and ordered attention.', 'The naming of heaven is held inside time, not outside it.', 'Creation’s pattern prepares the later gift of Sabbath rest.'],
+    rootStudyNote: 'שֵׁנִי belongs to the language of order and sequence. Its theological weight in Genesis 1:8 is simple but important: God’s creative work is not confusion but measured progression.',
+    grammarNotes: ['שֵׁנִי modifies יוֹם in the phrase יוֹם שֵׁנִי.', 'The word is ordinal, not cardinal; it means second rather than two.', 'The phrase closes the second day after evening and morning are named.'],
+    usageNote: 'In Genesis 1:8, שֵׁנִי marks the completion of the second day and invites readers to follow the ordered rhythm of the creation account.',
+    spiritualIntro: ['Genesis 1:8 ends not only with heaven named, but with time counted.', 'שֵׁנִי teaches the quiet discipline of sequence: God’s work unfolds one faithful step at a time.'],
+    messiahConnections: ['Colossians 1:17 — In Him all things hold together.', 'Hebrews 4:4 — Scripture reflects on God’s completed works and rest.', 'Mark 2:27 — The Sabbath is given for humanity.'],
+    messiahReflection: 'For Christian readers, the numbered days of creation can be contemplated in light of Messiah as the one in whom creation holds together and toward whom rest and renewal point.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'שֵׁנִי can become a prayer for patience: not every good work is finished on the first day, yet God’s ordering continues.'],
+    reflectionQuestions: ['Where do I need to honor God’s sequence instead of rushing?', 'How does the second day continue the movement from separation to order?', 'What does counted time teach me about trust?', 'How does this word prepare for Sabbath rest?', 'How can I receive today as one part of God’s larger ordering work?'],
+  },
+
 ];
 
 export function getWordStudy(slug) {
