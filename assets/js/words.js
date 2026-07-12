@@ -15,6 +15,8 @@ function renderWordPath(pathId = 'word-path', words = genesisOneOneWords) {
   const path = document.getElementById(pathId);
   if (!path) return;
 
+  path.innerHTML = '';
+
   words.forEach((word) => {
     const card = word.available ? document.createElement('a') : document.createElement('article');
     card.className = `word-path-card${word.available ? ' is-available' : ' is-locked'}`;
