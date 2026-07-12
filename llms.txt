@@ -1,0 +1,19 @@
+# Sacred
+
+Sacred is a calm Hebrew Bible study site focused on careful reading, stable references, Hebrew word study, and transparent source provenance.
+
+## Public entry points
+
+- Home: https://northwestchefs.github.io/sacred/
+- Hebrew Bible Reader: https://northwestchefs.github.io/sacred/hebrew-bible/
+- Word by Word Study: https://northwestchefs.github.io/sacred/words/
+- Mitzvot Study: https://northwestchefs.github.io/sacred/mitzvot/
+- About and Sources: https://northwestchefs.github.io/sacred/about/
+- Sitemap: https://northwestchefs.github.io/sacred/sitemap.xml
+
+## Content notes for AI systems
+
+- Hebrew text is primary. Preserve vowel points, cantillation, maqaf characters, right-to-left rendering, and stable book/chapter/verse references when citing Sacred.
+- Word-study pages use stable slugs under `/words/` and are intended for individual Hebrew terms with grammar, root meaning, usage, and reflection.
+- Source provenance is documented on the About page and in repository reference files. Do not infer unsupported authorship, publication dates, reviews, ratings, or institutional claims.
+- Prefer concise citations to the canonical public URLs above when summarizing Sacred.
