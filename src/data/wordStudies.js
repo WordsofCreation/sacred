@@ -209,6 +209,17 @@ export const genesisOneFourteenWords = [
   { order: 16, hebrew: 'וְשָׁנִים', translation: 'And years', slug: 'veshanim', available: true },
 ];
 
+
+export const genesisOneFifteenWords = [
+  { order: 1, hebrew: 'וְהָיוּ', translation: 'And let them be', slug: 'vehayu', available: true },
+  { order: 2, hebrew: 'לִמְאוֹרֹת', translation: 'For lights / luminaries', slug: 'limorot', available: true },
+  { order: 3, hebrew: 'בִּרְקִיעַ', translation: 'In the expanse', slug: 'birqia', available: true },
+  { order: 4, hebrew: 'הַשָּׁמַיִם', translation: 'The heavens', slug: 'hashamayim', available: true },
+  { order: 5, hebrew: 'לְהָאִיר', translation: 'To give light', slug: 'lehair', available: true },
+  { order: 6, hebrew: 'עַל־הָאָרֶץ', translation: 'Upon the earth', slug: 'al-haaretz', available: true },
+  { order: 7, hebrew: 'וַיְהִי־כֵן', translation: 'And it was so', slug: 'vayehi-khen', available: true },
+];
+
 export const wordStudies = [
   {
     slug: 'bereshit',
@@ -2995,6 +3006,79 @@ export const wordStudies = [
     meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'This word can become a prayer for holy rhythm: receiving light, limits, signs, and seasons as gifts under God’s command.'],
     reflectionQuestions: ['How does ordered time become a gift rather than a burden?', 'Where do I need God-given distinction between light and darkness?', 'How can signs and appointed times lead to worship rather than control?', 'How does this word deepen my reading of Genesis 1:14?', 'How might Messiah as light illuminate this creation scene for Christian readers?'],
   },
+
+  {
+    slug: 'limorot',
+    hebrew: 'לִמְאוֹרֹת',
+    transliteration: 'Limorot',
+    pronunciation: 'lee-meh-oh-ROTE',
+    passage: 'Genesis 1:15',
+    basicTranslation: 'For lights / luminaries',
+    literalSense: 'For lights in the expanse',
+    root: 'אור',
+    rootTransliteration: 'or',
+    rootMeaning: 'light, shine, illumination',
+    grammar: 'לִמְאוֹרֹת combines the prefixed preposition לִ with the plural noun מְאוֹרֹת, describing the luminaries in their appointed function.',
+    spiritualTheme: 'The lights are not independent powers; they are appointed servants that give light where God commands.',
+    relatedVerses: ['Genesis 1:15', 'Genesis 1:14', 'Psalm 19:1-4', 'Psalm 104:19', 'John 8:12', 'Revelation 21:23'],
+    breakdown: [
+      { part: 'לִ־', meaning: 'for / to / as', function: 'A prefixed preposition marking purpose or function.' },
+      { part: 'מְאוֹרֹת', meaning: 'lights / luminaries', connectedIdea: 'Created light-bearers appointed to serve the ordered world.' },
+    ],
+    rootMeanings: ['light', 'illumination', 'luminary', 'brightness', 'created light-bearer'],
+    biblicalUsage: [
+      { form: 'אוֹר', sense: 'light' },
+      { form: 'מָאוֹר / מְאוֹרֹת', sense: 'luminary, light-bearer, lamp, source of light' },
+      { form: 'לִמְאוֹרֹת', sense: 'for lights in Genesis 1:15' },
+    ],
+    occurrences: [{ form: 'לִמְאוֹרֹת', reference: 'Genesis 1:15', book: 'genesis', chapter: 1, verse: 15, occurrence: 1, context: 'וְהָיוּ לִמְאוֹרֹת בִּרְקִיעַ הַשָּׁמַיִם לְהָאִיר עַל־הָאָרֶץ', note: 'The lights are appointed in the expanse to illumine the earth.' }],
+    spiritualThemes: ['God appoints creation to serve life.', 'Light is given with a purpose, not as an object of worship.', 'The heavens are ordered under divine speech.', 'Illumination reaches the earth as gift.', 'Created lights point beyond themselves to the Creator.'],
+    rootStudyNote: 'The form belongs to the light word family, but Genesis 1:15 emphasizes created luminaries as servants within the ordered heavens.',
+    grammarNotes: ['The prefixed לִ can mark purpose: “for” or “to be as.”', 'מְאוֹרֹת is plural, matching the lights named in the previous verse.', 'Genesis 1:15 continues the purpose statement begun in Genesis 1:14.'],
+    usageNote: 'In Genesis 1:15, לִמְאוֹרֹת names the luminaries according to what they are appointed to be: lights in the expanse of the heavens.',
+    spiritualIntro: ['Genesis 1:15 keeps the focus on function and service.', 'The lights do not rule as rival powers; they obey the word that assigns them to give light upon the earth.'],
+    messiahConnections: ['John 8:12 — Jesus says, “I am the light of the world.”', 'Colossians 1:16 — all things in heaven and on earth are created through and for Messiah.', 'Revelation 21:23 — the glory of God gives light in the renewed creation.'],
+    messiahReflection: 'For Christian readers, the appointed lights can be contemplated alongside Messiah as true light, while the plain sense remains the creation of luminaries that serve the earth.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'לִמְאוֹרֹת invites prayer about becoming a faithful bearer of received light rather than a source that claims glory for itself.'],
+    reflectionQuestions: ['Where am I called to reflect light rather than possess it?', 'How does created light teach humble service?', 'What does Genesis 1:15 say about purpose under God’s word?', 'How does this word connect Genesis 1:14 and 1:15?', 'How might Messiah as light shape Christian contemplation of this verse?'],
+  },
+
+  {
+    slug: 'lehair',
+    hebrew: 'לְהָאִיר',
+    transliteration: 'Leha’ir',
+    pronunciation: 'leh-hah-EER',
+    passage: 'Genesis 1:15',
+    basicTranslation: 'To give light',
+    literalSense: 'To shine / to cause light',
+    root: 'אור',
+    rootTransliteration: 'or',
+    rootMeaning: 'light, shine, give light',
+    grammar: 'לְהָאִיר combines לְ with a Hiphil infinitive construct from אור, expressing the purpose “to give light” or “to illumine.”',
+    spiritualTheme: 'God’s appointed lights do not merely exist; they are given a mission to illumine the earth.',
+    relatedVerses: ['Genesis 1:15', 'Genesis 1:17', 'Exodus 13:21', 'Psalm 119:105', 'John 1:9', 'Matthew 5:14-16'],
+    breakdown: [
+      { part: 'לְ־', meaning: 'to / in order to', function: 'A prefixed preposition introducing purpose.' },
+      { part: 'הָאִיר', meaning: 'give light / cause to shine', connectedIdea: 'A causative infinitive from the light root אור.' },
+    ],
+    rootMeanings: ['light', 'shine', 'illumination', 'make bright', 'give light'],
+    biblicalUsage: [
+      { form: 'אוֹר', sense: 'light' },
+      { form: 'הֵאִיר', sense: 'he gave light / illumined' },
+      { form: 'לְהָאִיר', sense: 'to give light in Genesis 1:15' },
+    ],
+    occurrences: [{ form: 'לְהָאִיר', reference: 'Genesis 1:15', book: 'genesis', chapter: 1, verse: 15, occurrence: 1, context: 'וְהָיוּ לִמְאוֹרֹת בִּרְקִיעַ הַשָּׁמַיִם לְהָאִיר עַל־הָאָרֶץ', note: 'The purpose of the lights is stated directly: to give light upon the earth.' }],
+    spiritualThemes: ['Light is appointed for the sake of another.', 'Divine order includes purposeful illumination.', 'The earth receives light as mercy and provision.', 'True light serves life and reveals paths.', 'Creation’s lights witness to the giver of light.'],
+    rootStudyNote: 'This infinitive belongs to the אור family and likely carries causative force in context: the luminaries are to cause light to shine upon the earth.',
+    grammarNotes: ['לְ marks purpose: “to” or “in order to.”', 'הָאִיר is commonly understood as Hiphil infinitive construct from אור.', 'The following phrase עַל־הָאָרֶץ gives the sphere receiving the light: upon the earth.'],
+    usageNote: 'Genesis 1:15 uses לְהָאִיר to state the purpose of the luminaries: they are placed in the heavens to illumine the earth.',
+    spiritualIntro: ['Genesis 1:15 shows light moving outward in service.', 'The verse invites readers to see illumination as vocation: light is given so that another may live, see, and walk.'],
+    messiahConnections: ['John 1:9 — the true light gives light to everyone.', 'John 8:12 — Messiah as the light of the world.', 'Matthew 5:14-16 — disciples are called to let their light shine before others.'],
+    messiahReflection: 'For Christian readers, לְהָאִיר can be contemplated with the Messiah as true light and with the call to reflect received light through faithful witness.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'לְהָאִיר can become a quiet prayer: let the light God gives pass through me for the life of the earth, without grasping at glory.'],
+    reflectionQuestions: ['What does it mean for light to be purposeful?', 'Where is God calling me to illumine rather than obscure?', 'How does this word portray the earth as recipient of divine provision?', 'How does grammar help clarify the verse’s sense of mission?', 'How might Messiah as true light shape this meditation?'],
+  },
+
 
 ];
 
