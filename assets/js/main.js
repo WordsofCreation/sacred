@@ -71,6 +71,19 @@
 
   const REMOTE_TEXTS_BASE_URL = 'https://www.sefaria.org/api/texts';
 
+  const SEFARIA_REMOTE_REFS = Object.freeze({
+    '1 Samuel': 'I Samuel',
+    '2 Samuel': 'II Samuel',
+    '1 Kings': 'I Kings',
+    '2 Kings': 'II Kings',
+    '1 Chronicles': 'I Chronicles',
+    '2 Chronicles': 'II Chronicles',
+  });
+
+  function getSefariaRemoteRef(bookEnglish) {
+    return SEFARIA_REMOTE_REFS[bookEnglish] || bookEnglish;
+  }
+
   function normalizeSlug(value) {
     return String(value || '')
       .trim()
@@ -278,7 +291,8 @@
             return chapterCountByBookSlug.get(book.slug);
           }
 
-          const url = `${REMOTE_TEXTS_BASE_URL}/${encodeURIComponent(book.bookEnglish)}?lang=he&context=0&commentary=0&pad=0`;
+          const remoteRef = getSefariaRemoteRef(book.bookEnglish);
+          const url = `${REMOTE_TEXTS_BASE_URL}/${encodeURIComponent(remoteRef)}?lang=he&context=0&commentary=0&pad=0`;
           const response = await fetch(url);
           if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);

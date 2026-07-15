@@ -1,5 +1,18 @@
 import { normalizeSlug } from './utils.js';
 
+const SEFARIA_REMOTE_REFS = Object.freeze({
+  '1 Samuel': 'I Samuel',
+  '2 Samuel': 'II Samuel',
+  '1 Kings': 'I Kings',
+  '2 Kings': 'II Kings',
+  '1 Chronicles': 'I Chronicles',
+  '2 Chronicles': 'II Chronicles',
+});
+
+function getSefariaRemoteRef(bookEnglish) {
+  return SEFARIA_REMOTE_REFS[bookEnglish] || bookEnglish;
+}
+
 const TANAKH_BOOKS = Object.freeze([
   ['Genesis', 'בראשית'],
   ['Exodus', 'שמות'],
@@ -51,7 +64,7 @@ function buildTanakhBookCatalog() {
     bookHebrew,
     canonicalOrder: index + 1,
     aliases: [bookEnglish, bookHebrew],
-    remoteRef: bookEnglish,
+    remoteRef: getSefariaRemoteRef(bookEnglish),
     chapterCount: null,
     verseCount: null,
   }));
@@ -59,4 +72,5 @@ function buildTanakhBookCatalog() {
 
 export {
   buildTanakhBookCatalog,
+  getSefariaRemoteRef,
 };
