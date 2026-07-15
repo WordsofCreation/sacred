@@ -265,6 +265,14 @@ export const genesisOneEighteenWords = [
   { order: 11, hebrew: 'כִּי־טוֹב', translation: 'That it was good', slug: 'ki-tov', available: true },
 ];
 
+
+export const genesisOneNineteenWords = [
+  { order: 1, hebrew: 'וַיְהִי־עֶרֶב', translation: 'And there was evening', slug: 'vayehi-erev', available: true },
+  { order: 2, hebrew: 'וַיְהִי־בֹקֶר', translation: 'And there was morning', slug: 'vayehi-boqer', available: true },
+  { order: 3, hebrew: 'יוֹם', translation: 'Day', slug: 'yom', available: true },
+  { order: 4, hebrew: 'רְבִיעִי', translation: 'Fourth', slug: 'revii', available: true },
+];
+
 export const wordStudies = [
   {
     slug: 'bereshit',
@@ -3668,6 +3676,42 @@ export const wordStudies = [
     messiahReflection: 'For Christian readers, the separating work of light may be contemplated alongside Messiah and the Word that reveals truth, while the Genesis phrase speaks directly of the created lights’ function.',
     meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'Separation can sound harsh, yet in Genesis it is mercy: a boundary that lets creation breathe and be known.'],
     reflectionQuestions: ['What distinction do I need to honor today?', 'Where have I confused light and darkness?', 'How can boundaries serve love?', 'What does created order teach about discernment?', 'How does Messiah reveal truth for Christian readers?'],
+  },
+
+
+  {
+    slug: 'revii',
+    hebrew: 'רְבִיעִי',
+    transliteration: 'Revii',
+    pronunciation: 'reh-vee-EE',
+    passage: 'Genesis 1:19',
+    basicTranslation: 'Fourth',
+    literalSense: 'Fourth in sequence',
+    root: 'ארבע',
+    rootTransliteration: 'arba',
+    rootMeaning: 'four, fourth, fourfold order',
+    grammar: 'רְבִיעִי is an ordinal adjective meaning “fourth.” In Genesis 1:19 it modifies יוֹם and closes the fourth day of creation after the appointment of the luminaries.',
+    spiritualTheme: 'The fourth day gathers light-bearing service, ordered time, and divine goodness into a completed day.',
+    relatedVerses: ['Genesis 1:19', 'Genesis 1:14-18', 'Exodus 20:9-11', 'Psalm 104:19', 'John 8:12', 'Revelation 21:23'],
+    breakdown: [
+      { part: 'רְבִיעִי', meaning: 'fourth', function: 'Ordinal form marking this day’s place in the creation sequence.' },
+    ],
+    rootMeanings: ['four', 'fourth', 'ordered sequence', 'created time', 'completed stage'],
+    biblicalUsage: [
+      { form: 'רְבִיעִי', sense: 'Fourth, as an ordinal adjective.' },
+      { form: 'יוֹם רְבִיעִי', sense: 'The fourth day in Genesis 1:19.' },
+      { form: 'ארבע', sense: 'The Hebrew word family for four and fourth.' },
+    ],
+    occurrences: [{ form: 'רְבִיעִי', reference: 'Genesis 1:19', book: 'genesis', chapter: 1, verse: 19, occurrence: 1, context: 'וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם רְבִיעִי', note: 'Genesis 1:19 closes the fourth day after the heavenly lights are appointed for signs, seasons, days, and years.' }],
+    spiritualThemes: ['Creation unfolds by numbered days rather than accident.', 'The fourth day completes the appointment of lights that serve God’s order.', 'Evening and morning frame time as a gift.', 'The lights mark seasons, but God remains the source of light and order.', 'A completed day invites gratitude before moving to the next work.'],
+    rootStudyNote: 'The ordinal רְבִיעִי belongs to the number-four word family. In Genesis 1:19 the focus is not symbolic speculation first, but the simple closure of the fourth day in the creation sequence.',
+    grammarNotes: ['The word is an ordinal adjective, not a cardinal number.', 'It follows and modifies יוֹם, “day.”', 'Genesis 1 uses ordinal numbering to give the creation account a deliberate temporal structure.'],
+    usageNote: 'In Genesis 1:19, רְבִיעִי names the completed fourth day, the day on which the luminaries are appointed to serve ordered time.',
+    spiritualIntro: ['Genesis 1:19 closes the fourth day with the familiar evening-and-morning refrain.', 'רְבִיעִי invites the reader to receive time as structured, luminous, and accountable to God’s command.'],
+    messiahConnections: ['John 8:12 — Christian readers contemplate Messiah as the light of the world.', 'Colossians 1:16 — all created things, including heavenly lights, are through and for Messiah.', 'Revelation 21:23 — the renewed creation is illumined by God’s glory.'],
+    messiahReflection: 'For Christian readers, the fourth day’s ordered lights may be contemplated alongside Messiah as true light, while Genesis 1:19 itself plainly marks the completion of the fourth creation day.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'The fourth day can become a prayer for rightly ordered time: lights that serve, seasons that teach, and days received without anxiety.'],
+    reflectionQuestions: ['How does numbered time invite trust rather than haste?', 'Where do I need created lights to serve worship instead of control?', 'What completed stage should I receive with gratitude?', 'How does this word deepen my reading of Genesis 1:19?', 'How might Messiah as light shape Christian reflection on the fourth day?'],
   },
 
 ];
