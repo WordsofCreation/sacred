@@ -28,6 +28,8 @@ function buildBooksIndex(verses) {
         bookHebrew: verse.bookHebrew ?? null,
         canonicalOrder: safeParseInteger(verse.canonicalOrder),
         aliases: getBookLabels(verse),
+        remoteRef: verse.remoteRef ?? null,
+        file: verse.file ?? null,
         chapterSet: new Set(),
         verseCount: 0,
       });
@@ -52,6 +54,8 @@ function buildBooksIndex(verses) {
       bookHebrew: book.bookHebrew,
       canonicalOrder: book.canonicalOrder,
       aliases: book.aliases,
+      remoteRef: book.remoteRef,
+      file: book.file,
       chapterCount: book.chapterSet.size,
       verseCount: book.verseCount,
     }))

@@ -17,7 +17,13 @@ function safeParseInteger(value) {
   }
 
   if (typeof value === 'string' && value.trim()) {
-    const parsed = Number.parseInt(value, 10);
+    const trimmed = value.trim();
+
+    if (!/^[+-]?\d+$/.test(trimmed)) {
+      return null;
+    }
+
+    const parsed = Number.parseInt(trimmed, 10);
     return Number.isInteger(parsed) ? parsed : null;
   }
 
