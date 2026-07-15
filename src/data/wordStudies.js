@@ -4614,6 +4614,36 @@ export const wordStudies = [
     meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'The small word “them” can become a meditation on the wideness of divine generosity. God’s blessing reaches creatures before they can name it.'],
     reflectionQuestions: ['Who or what do I forget is included in God’s care?', 'How does this pronoun widen my view of blessing?', 'Where do I need to receive blessing before striving?', 'How can I honor creatures as recipients of God’s generosity?', 'How might Messiah deepen Christian care for creation?'],
   },
+
+  {
+    slug: 'chamishi',
+    hebrew: 'חֲמִישִׁי',
+    transliteration: 'Chamishi',
+    pronunciation: 'khah-mee-SHEE',
+    passage: 'Genesis 1:23',
+    basicTranslation: 'Fifth',
+    literalSense: 'fifth in order',
+    root: 'חמשׁ',
+    rootTransliteration: 'chamesh',
+    rootMeaning: 'five',
+    grammar: 'חֲמִישִׁי is an ordinal adjective, “fifth,” marking the completion of the fifth day in the creation sequence.',
+    spiritualTheme: 'God gathers a day of living abundance into ordered time.',
+    relatedVerses: ['Genesis 1:20', 'Genesis 1:21', 'Genesis 1:22', 'Genesis 1:23', 'Psalm 104:24-28', 'Matthew 6:26', 'Colossians 1:16'],
+    breakdown: [{ part: 'חֲמִישִׁי', meaning: 'Fifth', function: 'Ordinal marker closing the fifth day after God creates and blesses sea creatures and flying creatures.' }],
+    rootMeanings: ['five', 'fifth', 'ordered sequence', 'completed day'],
+    biblicalUsage: [{ form: 'חֲמִישִׁי', sense: 'Fifth.' }, { form: 'Genesis 1:23', sense: 'The fifth day is named after God fills waters and sky with living creatures.' }, { form: 'Genesis 1:31', sense: 'The day-counting refrain moves toward the sixth day and the completed creation week.' }],
+    occurrences: [{ form: 'חֲמִישִׁי', reference: 'Genesis 1:23', book: 'genesis', chapter: 1, verse: 23, occurrence: 1, context: 'וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם חֲמִישִׁי', note: 'The ordinal closes the fifth day of creation.' }],
+    spiritualThemes: ['God orders abundance within time.', 'The day is remembered after creatures receive blessing.', 'Evening and morning frame life as gift, not chaos.', 'Ordinal language teaches patient sequence and completion.', 'The fifth day invites gratitude for life in waters and sky.'],
+    rootStudyNote: 'The root חמשׁ names the number five; in Genesis 1:23 the ordinal form marks sequence rather than a separate verbal action.',
+    grammarNotes: ['The form is masculine singular and agrees with יוֹם, “day.”', 'It appears in the repeated evening-morning formula that structures Genesis 1.', 'The study treats the word in its immediate creation-week context without assigning hidden grammatical claims to the number itself.'],
+    usageNote: 'In Genesis 1:23, חֲמִישִׁי names the fifth day after God creates, blesses, and commands living creatures to multiply.',
+    spiritualIntro: ['Genesis 1:23 is brief, but it gathers the first blessing of living creatures into the rhythm of evening and morning.', 'חֲמִישִׁי invites contemplation of time as a vessel for God-given life.'],
+    messiahConnections: ['Colossians 1:16 — Christian readers confess living creatures as created through and for Messiah.', 'Matthew 6:26 — Jesus directs attention to birds under the Father’s care.', 'Revelation 5:13 — every creature is drawn into final praise.'],
+    messiahReflection: 'For Christian readers, the fifth day can be received as part of the creation that Messiah sustains and gathers into praise, while Genesis 1:23 itself remains the closing refrain of that day.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'The fifth day can become a prayer for ordered abundance: life blessed, time received, and creation held before God.'],
+    reflectionQuestions: ['Where do I need to trust God’s ordered timing?', 'How does the fifth day connect blessing with creaturely life?', 'What abundance in creation can I receive with gratitude today?', 'How can evening and morning shape patient faith?', 'How might Messiah deepen Christian wonder at living creatures?'],
+  },
+
 ];
 
 export function getWordStudy(slug) {
@@ -4635,3 +4665,11 @@ export const genesisOneTwentyTwoWords = [
   { order: 12, hebrew: 'בָּאָרֶץ', translation: 'On the earth', slug: 'baaretz', available: true },
 ];
 
+
+
+export const genesisOneTwentyThreeWords = [
+  { order: 1, hebrew: 'וַיְהִי־עֶרֶב', translation: 'And there was evening', slug: 'vayehi-erev', available: true },
+  { order: 2, hebrew: 'וַיְהִי־בֹקֶר', translation: 'And there was morning', slug: 'vayehi-boqer', available: true },
+  { order: 3, hebrew: 'יוֹם', translation: 'Day', slug: 'yom', available: true },
+  { order: 4, hebrew: 'חֲמִישִׁי', translation: 'Fifth', slug: 'chamishi', available: true },
+];
