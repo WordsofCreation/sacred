@@ -238,6 +238,18 @@ export const genesisOneSixteenWords = [
   { order: 15, hebrew: 'הַכּוֹכָבִים', translation: 'The stars', slug: 'hakokhavim', available: true },
 ];
 
+
+
+export const genesisOneSeventeenWords = [
+  { order: 1, hebrew: 'וַיִּתֵּן', translation: 'And He set / placed', slug: 'vayiten', available: true },
+  { order: 2, hebrew: 'אֹתָם', translation: 'Them', slug: 'otam', available: true },
+  { order: 3, hebrew: 'אֱלֹהִים', translation: 'God', slug: 'elohim', available: true },
+  { order: 4, hebrew: 'בִּרְקִיעַ', translation: 'In the expanse', slug: 'birqia', available: true },
+  { order: 5, hebrew: 'הַשָּׁמָיִם', translation: 'The heavens', slug: 'hashamayim', available: true },
+  { order: 6, hebrew: 'לְהָאִיר', translation: 'To give light', slug: 'lehair', available: true },
+  { order: 7, hebrew: 'עַל־הָאָרֶץ', translation: 'Upon the earth', slug: 'al-haaretz', available: true },
+];
+
 export const wordStudies = [
   {
     slug: 'bereshit',
@@ -3420,6 +3432,79 @@ export const wordStudies = [
     messiahReflection: 'For Christian readers, Genesis 1:16 can be contemplated alongside Messiah as the true light, while the plain sense remains the making of created lights that serve day and night.',
     meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'The ordered lights of Genesis 1:16 invite a quiet prayer to receive place, limit, and purpose from God rather than striving to become the source of light.'],
     reflectionQuestions: ['What does this word teach about created limits?', 'How does Genesis 1:16 distinguish God from the heavenly lights?', 'Where do I need to receive an appointed role rather than seize one?', 'How does this word serve the movement from light to ordered time?', 'How might Messiah as true light shape Christian contemplation of this verse?'],
+  },
+
+
+  {
+    slug: 'vayiten',
+    hebrew: 'וַיִּתֵּן',
+    transliteration: 'Vayyitten',
+    pronunciation: 'vah-yee-TEN',
+    passage: 'Genesis 1:17',
+    basicTranslation: 'And He set / placed',
+    literalSense: 'And He gave, set, or appointed',
+    root: 'נתן',
+    rootTransliteration: 'natan',
+    rootMeaning: 'give, set, place, appoint',
+    grammar: 'וַיִּתֵּן is a wayyiqtol verbal form from נתן. In Genesis 1:17 the subject is אֱלֹהִים, and the verb describes God placing the lights in the expanse of the heavens.',
+    spiritualTheme: 'God not only makes the lights; He sets them in their appointed place so their service gives light upon the earth.',
+    relatedVerses: ['Genesis 1:17', 'Genesis 1:14-16', 'Psalm 8:3', 'Psalm 136:7-9', 'Jeremiah 31:35', 'James 1:17'],
+    breakdown: [
+      { part: 'וַ', meaning: 'And / then', function: 'Narrative conjunction attached to the verb.' },
+      { part: 'יִּתֵּן', meaning: 'He gave / set / placed', function: 'Verbal form from נתן describing God’s appointing action.' },
+    ],
+    rootMeanings: ['to give', 'to set or place', 'to appoint for a purpose', 'to entrust into a role'],
+    biblicalUsage: [
+      { form: 'נָתַן', sense: 'To give, place, set, appoint, or hand over depending on context.' },
+      { form: 'וַיִּתֵּן', sense: 'And he gave / set / placed in narrative sequence.' },
+      { form: 'Genesis 1:17', sense: 'God sets the lights in the expanse to shine upon the earth.' },
+    ],
+    occurrences: [{ form: 'וַיִּתֵּן', reference: 'Genesis 1:17', book: 'genesis', chapter: 1, verse: 17, occurrence: 1, context: 'וַיִּתֵּן אֹתָם אֱלֹהִים בִּרְקִיעַ הַשָּׁמָיִם לְהָאִיר עַל־הָאָרֶץ', note: 'The verb describes God setting the lights in their appointed heavenly place.' }],
+    spiritualThemes: ['Created lights receive their position from God.', 'Placement is part of vocation: the lights are set so they may give light.', 'The verse portrays order as gift rather than accident.', 'God’s giving includes assignment, boundary, and purpose.', 'Heavenly bodies serve the earth under divine command.'],
+    rootStudyNote: 'The root נתן is broad and common. In Genesis 1:17, “set” or “placed” communicates the contextual sense better than treating the word as only an abstract act of giving.',
+    grammarNotes: ['The prefixed וַ marks the continued narrative movement.', 'The doubled tav reflects the form of נתן in this verbal pattern.', 'The object אֹתָם follows the verb, and אֱלֹהִים names the subject after the object.'],
+    usageNote: 'In Genesis 1:17, וַיִּתֵּן completes the movement from making the lights to assigning them a place and function.',
+    spiritualIntro: ['Genesis 1:17 slows the reader from making to placing.', 'The word וַיִּתֵּן invites contemplation of God as the one who gives created things their place, purpose, and service.'],
+    messiahConnections: ['John 1:4-5 — life and light are contemplated in relation to the Word by Christian readers.', 'Colossians 1:16-17 — all created things hold together in Messiah.', 'James 1:17 — every good gift comes from above.'],
+    messiahReflection: 'For Christian readers, God’s setting of the lights can be contemplated alongside Messiah as the one in whom creation coheres, while the plain sense remains God appointing created lights to serve the earth.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'To be set by God is to receive a place without needing to seize the center. Genesis 1:17 can become a prayer for ordered vocation.'],
+    reflectionQuestions: ['Where do I resist being placed by God?', 'How does appointed place become service rather than limitation?', 'What gift has also become a responsibility?', 'How does Genesis 1:17 portray order as mercy?', 'How might Messiah shape Christian reflection on created purpose?'],
+  },
+
+  {
+    slug: 'otam',
+    hebrew: 'אֹתָם',
+    transliteration: 'Otam',
+    pronunciation: 'oh-TAHM',
+    passage: 'Genesis 1:17',
+    basicTranslation: 'Them',
+    literalSense: 'Them / those objects',
+    root: 'את / הם',
+    rootTransliteration: 'et / hem',
+    rootMeaning: 'object marker with third-person masculine plural suffix',
+    grammar: 'אֹתָם functions as the pronominal object “them.” In Genesis 1:17 it points back to the lights named in the previous verse, now set by God in the expanse of the heavens.',
+    spiritualTheme: 'The lights are not independent powers; Scripture refers to them as objects placed by God for service.',
+    relatedVerses: ['Genesis 1:17', 'Genesis 1:16', 'Genesis 1:14-15', 'Psalm 136:7-9', 'Jeremiah 31:35', 'Colossians 1:16'],
+    breakdown: [
+      { part: 'אֹת', meaning: 'Object marker base', function: 'Marks the following pronominal object in this form.' },
+      { part: 'ָם', meaning: 'Them', function: 'Third-person masculine plural suffix pointing back to the lights.' },
+    ],
+    rootMeanings: ['them', 'the objects just named', 'created servants', 'appointed lights'],
+    biblicalUsage: [
+      { form: 'אֹתָם', sense: 'Them as direct object.' },
+      { form: 'Genesis 1:17', sense: 'The lights that God set in the expanse.' },
+      { form: 'Genesis 1:16', sense: 'The great lights and the stars named immediately before.' },
+    ],
+    occurrences: [{ form: 'אֹתָם', reference: 'Genesis 1:17', book: 'genesis', chapter: 1, verse: 17, occurrence: 1, context: 'וַיִּתֵּן אֹתָם אֱלֹהִים בִּרְקִיעַ הַשָּׁמָיִם לְהָאִיר עַל־הָאָרֶץ', note: 'The pronoun points back to the lights that God made in Genesis 1:16.' }],
+    spiritualThemes: ['Pronouns keep the verse connected to what came before.', 'The lights are treated as created objects, not divine beings.', 'God gives identity and function to what He has made.', 'Even great lights are “them” before the Creator.', 'Creaturely greatness remains dependent on divine appointment.'],
+    rootStudyNote: 'Because אֹתָם is a pronominal object form, this study focuses on function and context rather than deriving a devotional meaning from a lexical root alone.',
+    grammarNotes: ['The form points backward to a masculine plural object in context.', 'It stands before the subject אֱלֹהִים in the Hebrew word order of the verse.', 'The word should be read as a grammatical connector in the narrative, not as an independent theological title.'],
+    usageNote: 'In Genesis 1:17, אֹתָם gathers the lights of Genesis 1:16 into one object of God’s placing action.',
+    spiritualIntro: ['Small grammatical words often carry the thread of a passage.', 'אֹתָם teaches the reader to see the lights in relation to the God who made and placed them.'],
+    messiahConnections: ['Colossians 1:16 — all things were created through and for Messiah in Christian confession.', 'Hebrews 1:3 — the Son upholds all things by the word of His power.', 'Revelation 22:5 — the final hope is light from the Lord rather than dependence on created lights.'],
+    messiahReflection: 'For Christian readers, “them” may become a humble reminder that every created power is upheld and ordered under God, while Messiah is contemplated as the one in whom all creation holds together.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'The word אֹתָם can quiet the impulse to magnify created powers. They are “them”: made, named, placed, and purposeful before God.'],
+    reflectionQuestions: ['What created power am I tempted to treat as ultimate?', 'How does grammar help keep the verse connected?', 'What does it mean that even the lights are objects of God’s action?', 'Where do I need to receive my identity from context under God?', 'How can Christian readers contemplate created things without confusing them with the Creator?'],
   },
 
 ];
