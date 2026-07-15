@@ -57,8 +57,29 @@ if (!robots.includes(`Sitemap: ${canonicalBase}sitemap.xml`)) {
 
 const sitemap = await readFile(path.join(root, 'sitemap.xml'), 'utf8');
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+const htmlByPublicUrl = new Map();
+for (const relativePath of htmlFiles) {
+  if (exemptHtml(relativePath)) continue;
+  htmlByPublicUrl.set(publicUrlForHtml(relativePath), relativePath);
+}
+
 for (const url of sitemapUrls) {
-  if (!url.startsWith(canonicalBase)) warnings.push(`sitemap.xml: URL host differs from canonical base: ${url}`);
+  if (!url.startsWith(canonicalBase)) {
+    warnings.push(`sitemap.xml: URL host differs from canonical base: ${url}`);
+    continue;
+  }
+
+  const relativePath = htmlByPublicUrl.get(url);
+  if (!relativePath) {
+    warnings.push(`sitemap.xml: URL does not map to a local public HTML file: ${url}`);
+    continue;
+  }
+
+  const content = await readFile(path.join(root, relativePath), 'utf8');
+  const canonical = getTag(content, /<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
+  if (canonical && canonical !== url) {
+    warnings.push(`${relativePath}: sitemap URL must match canonical URL exactly (${url} !== ${canonical})`);
+  }
 }
 
 try {

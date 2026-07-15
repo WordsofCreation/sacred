@@ -11,6 +11,7 @@ The SEO organization should improve crawlability, metadata consistency, structur
 - Base URL: `https://northwestchefs.github.io/sacred/`
 - Sitemap: `https://northwestchefs.github.io/sacred/sitemap.xml`
 - Robots declaration: `robots.txt` must point to the same sitemap host.
+- Google Search Console sitemap rule: submit only clean, canonical, indexable destination URLs. Do not include redirecting legacy URLs, duplicate canonical variants, fragment URLs, or pages whose `<link rel="canonical">` points somewhere else.
 - AI discovery guide: `llms.txt` should summarize public entry points, source policy, and high-value study pages.
 
 ## Agent Roster
@@ -31,7 +32,8 @@ Owns search-engine access.
 - Checks `robots.txt` and `sitemap.xml` host alignment.
 - Confirms every public page intended for indexing has a crawlable URL.
 - Flags sitemap URLs that do not have matching local files.
-- Keeps redirects or legacy pages explicit and conservative.
+- Flags sitemap URLs whose page-level canonical URL differs from the sitemap URL.
+- Excludes redirecting or legacy URLs from `sitemap.xml`; keep those pages explicit and conservative, but let their canonical destination be the sitemap URL.
 
 ### 3. Metadata Agent
 
@@ -49,6 +51,7 @@ Owns JSON-LD accuracy.
 - Validates that structured data does not invent authorship, reviews, ratings, publication dates, or organization facts.
 - Prefers `WebSite`, `WebPage`, `LearningResource`, and `DefinedTerm` where the visible content supports those types.
 - Ensures JSON-LD URLs match canonical URLs.
+- Ensures submitted sitemap URLs match each page's canonical URL exactly, including trailing slash and `.html` choices.
 - Keeps structured data conservative when source provenance is still being confirmed.
 
 ### 5. AI Search Agent
@@ -88,6 +91,7 @@ Owns validation before commit.
 ## Success Criteria
 
 - `robots.txt`, `sitemap.xml`, canonical links, and JSON-LD use the same deployed host.
+- `sitemap.xml` contains canonical destination URLs only; redirected legacy URLs and pages canonicalized elsewhere are excluded.
 - Public indexable pages have unique titles, meta descriptions, and canonical URLs.
 - AI crawlers can find a concise project summary in `llms.txt`.
 - Structured data matches visible page content and source provenance.
