@@ -313,6 +313,37 @@ export const genesisOneTwentyOneWords = [
   { order: 19, hebrew: 'כִּי־טוֹב', translation: 'That it was good', slug: 'ki-tov', available: true },
 ];
 
+function createGenesis126Study({ slug, hebrew, transliteration, pronunciation, basicTranslation, literalSense, root, rootTransliteration, rootMeaning, grammar, theme, breakdown }) {
+  return {
+    slug,
+    hebrew,
+    transliteration,
+    pronunciation,
+    passage: 'Genesis 1:26',
+    basicTranslation,
+    literalSense,
+    root,
+    rootTransliteration,
+    rootMeaning,
+    grammar,
+    spiritualTheme: theme,
+    relatedVerses: ['Genesis 1:26', 'Genesis 1:27', 'Genesis 2:7', 'Genesis 9:6', 'Psalm 8:4-8', 'Colossians 1:15-17'],
+    breakdown,
+    rootMeanings: [rootMeaning, 'Read in Genesis 1:26 according to the word’s immediate grammar and creation context.', 'The study avoids overclaiming beyond the verse’s image, likeness, and vocation language.'],
+    biblicalUsage: [{ form: hebrew, sense: basicTranslation + '.' }, { form: 'Genesis 1:26', sense: 'God announces the making of humanity in the divine image and likeness, with stewardship over living creatures.' }],
+    occurrences: [{ form: hebrew, reference: 'Genesis 1:26', book: 'genesis', chapter: 1, verse: 26, occurrence: 1, context: 'וַיֹּאמֶר אֱלֹהִים נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ וְיִרְדּוּ בִדְגַת הַיָּם וּבְעוֹף הַשָּׁמַיִם וּבַבְּהֵמָה וּבְכָל־הָאָרֶץ וּבְכָל־הָרֶמֶשׂ הָרֹמֵשׂ עַל־הָאָרֶץ', note: 'This word belongs to Genesis 1:26, where humanity is introduced with image, likeness, and entrusted rule.' }],
+    spiritualThemes: ['Human dignity received from God', 'Vocation as stewardship rather than exploitation', 'Creation ordered by divine speech', 'Careful attention to every realm of life'],
+    rootStudyNote: 'This study stays close to Genesis 1:26. Interpretive questions around the plural “Let us make” are acknowledged by reading the verse carefully without forcing one explanation into the grammar alone.',
+    grammarNotes: ['Read the word within God’s deliberative speech in Genesis 1:26.', 'The verse joins image and likeness language with the vocation to rule.', 'Hebrew maqaf phrases are treated here as readable word-study units for the landing path.'],
+    usageNote: `In Genesis 1:26, ${hebrew} helps introduce humanity’s dignity and responsibility within God’s good creation.`,
+    spiritualIntro: ['Genesis 1:26 slows the creation account before the making of humanity.', `${hebrew} invites reflection on vocation, humility, and care for living creatures.`],
+    messiahConnections: ['Colossians 1:15 — Christian readers identify Messiah as the image of the invisible God.', 'Hebrews 2:6-9 — Psalm 8 language is read in relation to Jesus and humanity’s vocation.', 'Romans 8:29 — Christian formation is described as conformity to the Son.'],
+    messiahReflection: 'For Christian readers, Genesis 1:26 can be contemplated alongside Messiah as the true image who restores human vocation, while the verse itself announces humanity’s creation in God’s image and likeness.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'Let the word become a prayer for humble stewardship before the God who speaks human dignity into being.'],
+    reflectionQuestions: ['How does this word shape my understanding of human dignity?', 'Where does stewardship need to replace control in my habits?', 'What creaturely life am I tempted to overlook?', 'How can image and likeness language deepen humility rather than pride?', 'How might Messiah shape Christian reflection on this human vocation?'],
+  };
+}
+
 export const wordStudies = [
   {
     slug: 'bereshit',
@@ -4893,6 +4924,20 @@ export const wordStudies = [
     reflectionQuestions: ['How does God’s attention to land creatures train my attention?', 'Where do I need to receive created limits as good?', 'What overlooked creatures invite reverence today?', 'How can the goodness of creaturely life shape my habits?', 'How might Messiah deepen Christian wonder at the earth and its creatures?'],
   },
 
+
+  createGenesis126Study({ slug: 'naaseh', hebrew: 'נַעֲשֶׂה', transliteration: 'naaseh', pronunciation: 'nah-ah-SEH', basicTranslation: 'Let us make', literalSense: 'Let us make / we will make', root: 'עשה', rootTransliteration: 'asah', rootMeaning: 'To do, make, accomplish', grammar: 'Qal imperfect/cohortative first common plural from עשה.', theme: 'God’s deliberate counsel before forming humanity.', breakdown: [{ part: 'נַ', meaning: 'First-person plural imperfect prefix', function: 'Marks the speaker as “we / us.”' }, { part: 'עֲשֶׂה', meaning: 'Make / do', function: 'Names the creative action contemplated in the verse.' }] }),
+  createGenesis126Study({ slug: 'adam', hebrew: 'אָדָם', transliteration: 'adam', pronunciation: 'ah-DAHM', basicTranslation: 'Humanity / man', literalSense: 'Human being, humankind', root: 'אדם', rootTransliteration: 'adam', rootMeaning: 'Human, humankind; related to ground/redness in Hebrew wordplay', grammar: 'Masculine singular noun often used collectively for humanity.', theme: 'Humanity receives a vocation within creation.', breakdown: [{ part: 'אָדָם', meaning: 'Humanity', function: 'Names the creature God determines to make in the divine image.' }] }),
+  createGenesis126Study({ slug: 'betsalmenu', hebrew: 'בְּצַלְמֵנוּ', transliteration: 'betsalmenu', pronunciation: 'beh-tsahl-MAY-noo', basicTranslation: 'In our image', literalSense: 'In our image / according to our image', root: 'צלם', rootTransliteration: 'tselem', rootMeaning: 'Image, representation', grammar: 'Preposition בְּ attached to צֶלֶם with first common plural pronominal suffix.', theme: 'Human life is framed by God-given image and representation.', breakdown: [{ part: 'בְּ', meaning: 'In / by / according to', function: 'Introduces the image pattern.' }, { part: 'צַלְמֵנוּ', meaning: 'Our image', function: 'Names the divine image language of humanity’s vocation.' }] }),
+  createGenesis126Study({ slug: 'kidmutenu', hebrew: 'כִּדְמוּתֵנוּ', transliteration: 'kidmutenu', pronunciation: 'keed-moo-TAY-noo', basicTranslation: 'According to our likeness', literalSense: 'As / according to our likeness', root: 'דמה', rootTransliteration: 'damah', rootMeaning: 'To be like, resemble', grammar: 'Comparative כְּ attached to דְּמוּת with first common plural suffix.', theme: 'Likeness language deepens the dignity and responsibility of humanity.', breakdown: [{ part: 'כִּ', meaning: 'As / according to', function: 'Marks comparison or correspondence.' }, { part: 'דְמוּתֵנוּ', meaning: 'Our likeness', function: 'Complements image language with resemblance.' }] }),
+  createGenesis126Study({ slug: 'veyirdu', hebrew: 'וְיִרְדּוּ', transliteration: 'veyirdu', pronunciation: 'veh-yeer-DOO', basicTranslation: 'And let them rule', literalSense: 'And let them have dominion', root: 'רדה', rootTransliteration: 'radah', rootMeaning: 'To rule, have dominion', grammar: 'Conjunction וְ with Qal imperfect third masculine plural used jussively.', theme: 'Human dominion is received as vocation under God, not autonomous possession.', breakdown: [{ part: 'וְ', meaning: 'And', function: 'Connects making humanity with humanity’s vocation.' }, { part: 'יִרְדּוּ', meaning: 'Let them rule', function: 'States humanity’s appointed responsibility toward living creatures.' }] }),
+  createGenesis126Study({ slug: 'bidgat', hebrew: 'בִדְגַת', transliteration: 'bidgat', pronunciation: 'beed-GAHT', basicTranslation: 'Over the fish of', literalSense: 'In / over the fish of', root: 'דג', rootTransliteration: 'dag', rootMeaning: 'Fish', grammar: 'Preposition בְּ attached to construct form דְּגַת.', theme: 'The sea creatures are included within humanity’s stewardship.', breakdown: [{ part: 'בִ', meaning: 'In / over', function: 'Introduces the sphere of rule.' }, { part: 'דְגַת', meaning: 'Fish of', function: 'Names the sea creatures as the first domain listed.' }] }),
+  createGenesis126Study({ slug: 'hayam', hebrew: 'הַיָּם', transliteration: 'hayyam', pronunciation: 'hai-YAHM', basicTranslation: 'The sea', literalSense: 'The sea', root: 'ים', rootTransliteration: 'yam', rootMeaning: 'Sea, large body of water', grammar: 'Noun יָם with definite article הַ.', theme: 'The sea remains part of ordered creation under God’s command.', breakdown: [{ part: 'הַ', meaning: 'The', function: 'Marks the noun as definite.' }, { part: 'יָּם', meaning: 'Sea', function: 'Locates the fish within their watery realm.' }] }),
+  createGenesis126Study({ slug: 'uveof', hebrew: 'וּבְעוֹף', transliteration: 'uveof', pronunciation: 'oo-veh-OHF', basicTranslation: 'And over the bird', literalSense: 'And in / over the flying creature', root: 'עוף', rootTransliteration: 'uf', rootMeaning: 'To fly; bird/flying creature', grammar: 'Conjunction וּ plus preposition בְּ attached to עוֹף.', theme: 'The sky creatures also belong within humanity’s entrusted care.', breakdown: [{ part: 'וּבְ', meaning: 'And in / over', function: 'Adds another realm of stewardship.' }, { part: 'עוֹף', meaning: 'Bird / flying creature', function: 'Names the creatures of the heavens.' }] }),
+  createGenesis126Study({ slug: 'uvabbehemah', hebrew: 'וּבַבְּהֵמָה', transliteration: 'uvabbehemah', pronunciation: 'oo-vah-beh-hay-MAH', basicTranslation: 'And over the cattle', literalSense: 'And in / over the livestock', root: 'בהמה', rootTransliteration: 'behemah', rootMeaning: 'Beast, cattle, livestock', grammar: 'Conjunction וּ plus preposition/article בַּ attached to בְּהֵמָה.', theme: 'Domestic land animals are gathered into the stewardship charge.', breakdown: [{ part: 'וּבַ', meaning: 'And in / over the', function: 'Adds a definite domain.' }, { part: 'בְּהֵמָה', meaning: 'Cattle / livestock', function: 'Names large land animals within humanity’s care.' }] }),
+  createGenesis126Study({ slug: 'uvekhol-haaretz', hebrew: 'וּבְכָל־הָאָרֶץ', transliteration: 'uvekhol-haaretz', pronunciation: 'oo-veh-khol hah-AH-rets', basicTranslation: 'And over all the earth', literalSense: 'And in / over all the earth', root: 'כל / ארץ', rootTransliteration: 'kol / erets', rootMeaning: 'All / earth, land', grammar: 'Conjunction and preposition attached to כָּל in a maqaf phrase with הָאָרֶץ.', theme: 'The human vocation is broad, earthly, and accountable before God.', breakdown: [{ part: 'וּבְכָל', meaning: 'And over all', function: 'Expands the scope of dominion.' }, { part: 'הָאָרֶץ', meaning: 'The earth', function: 'Names the created land as the sphere of responsibility.' }] }),
+  createGenesis126Study({ slug: 'uvekhol-haremes', hebrew: 'וּבְכָל־הָרֶמֶשׂ', transliteration: 'uvekhol-haremes', pronunciation: 'oo-veh-khol hah-REH-mes', basicTranslation: 'And over every creeping thing', literalSense: 'And in / over every creeping thing', root: 'רמש', rootTransliteration: 'ramas', rootMeaning: 'To creep, move along the ground', grammar: 'Conjunction and preposition attached to כָּל in a maqaf phrase with definite רֶמֶשׂ.', theme: 'Even small ground-moving life is included in God’s ordered care.', breakdown: [{ part: 'וּבְכָל', meaning: 'And over every', function: 'Adds comprehensive scope.' }, { part: 'הָרֶמֶשׂ', meaning: 'The creeping thing', function: 'Names small moving creatures of the ground.' }] }),
+  createGenesis126Study({ slug: 'haromes', hebrew: 'הָרֹמֵשׂ', transliteration: 'haromes', pronunciation: 'hah-roh-MAYS', basicTranslation: 'That creeps', literalSense: 'The one creeping / moving', root: 'רמש', rootTransliteration: 'ramas', rootMeaning: 'To creep, move along the ground', grammar: 'Definite participle from רמש.', theme: 'The verse lingers over embodied, earth-bound movement as part of creation’s life.', breakdown: [{ part: 'הָ', meaning: 'The / that', function: 'Marks the participle as definite.' }, { part: 'רֹמֵשׂ', meaning: 'Creeping / moving', function: 'Describes the action of the creatures named.' }] }),
+
 ];
 
 export function getWordStudy(slug) {
@@ -4955,4 +5000,24 @@ export const genesisOneTwentyFiveWords = [
   { order: 12, hebrew: 'וַיַּרְא', translation: 'And He saw', slug: 'vayar', available: true },
   { order: 13, hebrew: 'אֱלֹהִים', translation: 'God', slug: 'elohim', available: true },
   { order: 14, hebrew: 'כִּי־טוֹב', translation: 'That it was good', slug: 'ki-tov', available: true },
+];
+
+
+export const genesisOneTwentySixWords = [
+  { order: 1, hebrew: 'וַיֹּאמֶר', translation: 'And He said', slug: 'vayomer', available: true },
+  { order: 2, hebrew: 'אֱלֹהִים', translation: 'God', slug: 'elohim', available: true },
+  { order: 3, hebrew: 'נַעֲשֶׂה', translation: 'Let us make', slug: 'naaseh', available: true },
+  { order: 4, hebrew: 'אָדָם', translation: 'Humanity / man', slug: 'adam', available: true },
+  { order: 5, hebrew: 'בְּצַלְמֵנוּ', translation: 'In our image', slug: 'betsalmenu', available: true },
+  { order: 6, hebrew: 'כִּדְמוּתֵנוּ', translation: 'According to our likeness', slug: 'kidmutenu', available: true },
+  { order: 7, hebrew: 'וְיִרְדּוּ', translation: 'And let them rule', slug: 'veyirdu', available: true },
+  { order: 8, hebrew: 'בִדְגַת', translation: 'Over the fish of', slug: 'bidgat', available: true },
+  { order: 9, hebrew: 'הַיָּם', translation: 'The sea', slug: 'hayam', available: true },
+  { order: 10, hebrew: 'וּבְעוֹף', translation: 'And over the bird', slug: 'uveof', available: true },
+  { order: 11, hebrew: 'הַשָּׁמַיִם', translation: 'The heavens', slug: 'hashamayim', available: true },
+  { order: 12, hebrew: 'וּבַבְּהֵמָה', translation: 'And over the cattle', slug: 'uvabbehemah', available: true },
+  { order: 13, hebrew: 'וּבְכָל־הָאָרֶץ', translation: 'And over all the earth', slug: 'uvekhol-haaretz', available: true },
+  { order: 14, hebrew: 'וּבְכָל־הָרֶמֶשׂ', translation: 'And over every creeping thing', slug: 'uvekhol-haremes', available: true },
+  { order: 15, hebrew: 'הָרֹמֵשׂ', translation: 'That creeps', slug: 'haromes', available: true },
+  { order: 16, hebrew: 'עַל־הָאָרֶץ', translation: 'Upon the earth', slug: 'al-haaretz', available: true },
 ];
