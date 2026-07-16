@@ -1,4 +1,4 @@
-import { genesisOneOneWords, genesisOneTwoWords, genesisOneThreeWords, genesisOneFourWords, genesisOneFiveWords, genesisOneSixWords, genesisOneSevenWords, genesisOneEightWords, genesisOneNineWords, genesisOneTenWords, genesisOneElevenWords, genesisOneTwelveWords, genesisOneThirteenWords, genesisOneFourteenWords, genesisOneFifteenWords, genesisOneSixteenWords, genesisOneSeventeenWords, genesisOneEighteenWords, genesisOneNineteenWords, genesisOneTwentyWords, genesisOneTwentyOneWords, genesisOneTwentyTwoWords, genesisOneTwentyThreeWords, genesisOneTwentyFourWords, getWordStudy } from '../../src/data/wordStudies.js';
+import { genesisOneOneWords, genesisOneTwoWords, genesisOneThreeWords, genesisOneFourWords, genesisOneFiveWords, genesisOneSixWords, genesisOneSevenWords, genesisOneEightWords, genesisOneNineWords, genesisOneTenWords, genesisOneElevenWords, genesisOneTwelveWords, genesisOneThirteenWords, genesisOneFourteenWords, genesisOneFifteenWords, genesisOneSixteenWords, genesisOneSeventeenWords, genesisOneEighteenWords, genesisOneNineteenWords, genesisOneTwentyWords, genesisOneTwentyOneWords, genesisOneTwentyTwoWords, genesisOneTwentyThreeWords, genesisOneTwentyFourWords, genesisOneTwentyFiveWords, getWordStudy } from '../../src/data/wordStudies.js';
 import { createHebrewBibleDataLayer } from '../../src/data/hebrewBible/index.js';
 import { buildSearchIndex, runSearchQuery } from '../../src/search/hebrewBible/index.js';
 
@@ -419,4 +419,5 @@ renderWordPath('word-path-genesis-1-21', genesisOneTwentyOneWords);
 renderWordPath('word-path-genesis-1-22', genesisOneTwentyTwoWords);
 renderWordPath('word-path-genesis-1-23', genesisOneTwentyThreeWords);
 renderWordPath('word-path-genesis-1-24', genesisOneTwentyFourWords);
+renderWordPath('word-path-genesis-1-25', genesisOneTwentyFiveWords);
 renderDetail();
