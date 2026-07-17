@@ -11,6 +11,41 @@ function el(tag, className, text) {
   return node;
 }
 
+const verseWordPaths = [
+  { reference: 'Genesis 1:1', pathId: 'word-path', words: genesisOneOneWords },
+  { reference: 'Genesis 1:2', pathId: 'word-path-genesis-1-2', words: genesisOneTwoWords },
+  { reference: 'Genesis 1:3', pathId: 'word-path-genesis-1-3', words: genesisOneThreeWords },
+  { reference: 'Genesis 1:4', pathId: 'word-path-genesis-1-4', words: genesisOneFourWords },
+  { reference: 'Genesis 1:5', pathId: 'word-path-genesis-1-5', words: genesisOneFiveWords },
+  { reference: 'Genesis 1:6', pathId: 'word-path-genesis-1-6', words: genesisOneSixWords },
+  { reference: 'Genesis 1:7', pathId: 'word-path-genesis-1-7', words: genesisOneSevenWords },
+  { reference: 'Genesis 1:8', pathId: 'word-path-genesis-1-8', words: genesisOneEightWords },
+  { reference: 'Genesis 1:9', pathId: 'word-path-genesis-1-9', words: genesisOneNineWords },
+  { reference: 'Genesis 1:10', pathId: 'word-path-genesis-1-10', words: genesisOneTenWords },
+  { reference: 'Genesis 1:11', pathId: 'word-path-genesis-1-11', words: genesisOneElevenWords },
+  { reference: 'Genesis 1:12', pathId: 'word-path-genesis-1-12', words: genesisOneTwelveWords },
+  { reference: 'Genesis 1:13', pathId: 'word-path-genesis-1-13', words: genesisOneThirteenWords },
+  { reference: 'Genesis 1:14', pathId: 'word-path-genesis-1-14', words: genesisOneFourteenWords },
+  { reference: 'Genesis 1:15', pathId: 'word-path-genesis-1-15', words: genesisOneFifteenWords },
+  { reference: 'Genesis 1:16', pathId: 'word-path-genesis-1-16', words: genesisOneSixteenWords },
+  { reference: 'Genesis 1:17', pathId: 'word-path-genesis-1-17', words: genesisOneSeventeenWords },
+  { reference: 'Genesis 1:18', pathId: 'word-path-genesis-1-18', words: genesisOneEighteenWords },
+  { reference: 'Genesis 1:19', pathId: 'word-path-genesis-1-19', words: genesisOneNineteenWords },
+  { reference: 'Genesis 1:20', pathId: 'word-path-genesis-1-20', words: genesisOneTwentyWords },
+  { reference: 'Genesis 1:21', pathId: 'word-path-genesis-1-21', words: genesisOneTwentyOneWords },
+  { reference: 'Genesis 1:22', pathId: 'word-path-genesis-1-22', words: genesisOneTwentyTwoWords },
+  { reference: 'Genesis 1:23', pathId: 'word-path-genesis-1-23', words: genesisOneTwentyThreeWords },
+  { reference: 'Genesis 1:24', pathId: 'word-path-genesis-1-24', words: genesisOneTwentyFourWords },
+  { reference: 'Genesis 1:25', pathId: 'word-path-genesis-1-25', words: genesisOneTwentyFiveWords },
+  { reference: 'Genesis 1:26', pathId: 'word-path-genesis-1-26', words: genesisOneTwentySixWords },
+  { reference: 'Genesis 1:27', pathId: 'word-path-genesis-1-27', words: genesisOneTwentySevenWords },
+  { reference: 'Genesis 1:28', pathId: 'word-path-genesis-1-28', words: genesisOneTwentyEightWords },
+  { reference: 'Genesis 1:29', pathId: 'word-path-genesis-1-29', words: genesisOneTwentyNineWords },
+  { reference: 'Genesis 1:30', pathId: 'word-path-genesis-1-30', words: genesisOneThirtyWords },
+  { reference: 'Genesis 1:31', pathId: 'word-path-genesis-1-31', words: genesisOneThirtyOneWords },
+  { reference: 'Genesis 2:1', pathId: 'word-path-genesis-2-1', words: genesisTwoOneWords },
+];
+
 function renderWordPath(pathId = 'word-path', words = genesisOneOneWords) {
   const path = document.getElementById(pathId);
   if (!path) return;
@@ -395,36 +430,49 @@ async function renderDetail() {
   root.append(studySection('Reflection Questions', [list(study.reflectionQuestions, 'reflection-questions')], 'reflection-section'));
 }
 
-renderWordPath('word-path', genesisOneOneWords);
-renderWordPath('word-path-genesis-1-2', genesisOneTwoWords);
-renderWordPath('word-path-genesis-1-3', genesisOneThreeWords);
-renderWordPath('word-path-genesis-1-4', genesisOneFourWords);
-renderWordPath('word-path-genesis-1-5', genesisOneFiveWords);
-renderWordPath('word-path-genesis-1-6', genesisOneSixWords);
-renderWordPath('word-path-genesis-1-7', genesisOneSevenWords);
-renderWordPath('word-path-genesis-1-8', genesisOneEightWords);
-renderWordPath('word-path-genesis-1-9', genesisOneNineWords);
-renderWordPath('word-path-genesis-1-10', genesisOneTenWords);
-renderWordPath('word-path-genesis-1-11', genesisOneElevenWords);
-renderWordPath('word-path-genesis-1-12', genesisOneTwelveWords);
-renderWordPath('word-path-genesis-1-13', genesisOneThirteenWords);
-renderWordPath('word-path-genesis-1-14', genesisOneFourteenWords);
-renderWordPath('word-path-genesis-1-15', genesisOneFifteenWords);
-renderWordPath('word-path-genesis-1-16', genesisOneSixteenWords);
-renderWordPath('word-path-genesis-1-17', genesisOneSeventeenWords);
-renderWordPath('word-path-genesis-1-18', genesisOneEighteenWords);
-renderWordPath('word-path-genesis-1-19', genesisOneNineteenWords);
-renderWordPath('word-path-genesis-1-20', genesisOneTwentyWords);
-renderWordPath('word-path-genesis-1-21', genesisOneTwentyOneWords);
-renderWordPath('word-path-genesis-1-22', genesisOneTwentyTwoWords);
-renderWordPath('word-path-genesis-1-23', genesisOneTwentyThreeWords);
-renderWordPath('word-path-genesis-1-24', genesisOneTwentyFourWords);
-renderWordPath('word-path-genesis-1-25', genesisOneTwentyFiveWords);
-renderWordPath('word-path-genesis-1-26', genesisOneTwentySixWords);
-renderWordPath('word-path-genesis-1-27', genesisOneTwentySevenWords);
-renderWordPath('word-path-genesis-1-28', genesisOneTwentyEightWords);
-renderWordPath('word-path-genesis-1-29', genesisOneTwentyNineWords);
-renderWordPath('word-path-genesis-1-30', genesisOneThirtyWords);
-renderWordPath('word-path-genesis-1-31', genesisOneThirtyOneWords);
-renderWordPath('word-path-genesis-2-1', genesisTwoOneWords);
+function setupVersePagination() {
+  const sections = Array.from(document.querySelectorAll('.genesis-word-section'));
+  const select = document.querySelector('[data-verse-page-select]');
+  const previousButton = document.querySelector('[data-verse-page-previous]');
+  const nextButton = document.querySelector('[data-verse-page-next]');
+  const summary = document.querySelector('[data-verse-page-summary]');
+
+  verseWordPaths.forEach(({ pathId, words }) => renderWordPath(pathId, words));
+
+  if (!sections.length || !select || !previousButton || !nextButton || !summary) return;
+
+  sections.forEach((section, index) => {
+    const heading = section.querySelector('h3');
+    const reference = heading?.textContent?.trim() || verseWordPaths[index]?.reference || `Verse ${index + 1}`;
+    const option = document.createElement('option');
+    option.value = String(index);
+    option.textContent = reference;
+    select.append(option);
+  });
+
+  let currentIndex = 0;
+
+  const showVerse = (index) => {
+    currentIndex = Math.min(Math.max(index, 0), sections.length - 1);
+    sections.forEach((section, sectionIndex) => {
+      const isCurrent = sectionIndex === currentIndex;
+      section.hidden = !isCurrent;
+      section.classList.toggle('is-current-verse', isCurrent);
+    });
+
+    const activeReference = select.options[currentIndex]?.textContent || `Verse ${currentIndex + 1}`;
+    select.value = String(currentIndex);
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === sections.length - 1;
+    summary.textContent = `Showing ${activeReference} (${currentIndex + 1} of ${sections.length}). All words in this verse are visible below.`;
+  };
+
+  previousButton.addEventListener('click', () => showVerse(currentIndex - 1));
+  nextButton.addEventListener('click', () => showVerse(currentIndex + 1));
+  select.addEventListener('change', () => showVerse(Number(select.value)));
+
+  showVerse(0);
+}
+
+setupVersePagination();
 renderDetail();
