@@ -1,4 +1,4 @@
-import { genesisOneOneWords, genesisOneTwoWords, genesisOneThreeWords, genesisOneFourWords, genesisOneFiveWords, genesisOneSixWords, genesisOneSevenWords, genesisOneEightWords, genesisOneNineWords, genesisOneTenWords, genesisOneElevenWords, genesisOneTwelveWords, genesisOneThirteenWords, genesisOneFourteenWords, genesisOneFifteenWords, genesisOneSixteenWords, genesisOneSeventeenWords, genesisOneEighteenWords, genesisOneNineteenWords, genesisOneTwentyWords, genesisOneTwentyOneWords, genesisOneTwentyTwoWords, genesisOneTwentyThreeWords, genesisOneTwentyFourWords, genesisOneTwentyFiveWords, genesisOneTwentySixWords, genesisOneTwentySevenWords, genesisOneTwentyEightWords, genesisOneTwentyNineWords, getWordStudy } from '../../src/data/wordStudies.js';
+import { genesisOneOneWords, genesisOneTwoWords, genesisOneThreeWords, genesisOneFourWords, genesisOneFiveWords, genesisOneSixWords, genesisOneSevenWords, genesisOneEightWords, genesisOneNineWords, genesisOneTenWords, genesisOneElevenWords, genesisOneTwelveWords, genesisOneThirteenWords, genesisOneFourteenWords, genesisOneFifteenWords, genesisOneSixteenWords, genesisOneSeventeenWords, genesisOneEighteenWords, genesisOneNineteenWords, genesisOneTwentyWords, genesisOneTwentyOneWords, genesisOneTwentyTwoWords, genesisOneTwentyThreeWords, genesisOneTwentyFourWords, genesisOneTwentyFiveWords, genesisOneTwentySixWords, genesisOneTwentySevenWords, genesisOneTwentyEightWords, genesisOneTwentyNineWords, genesisOneThirtyWords, getWordStudy } from '../../src/data/wordStudies.js';
 import { createHebrewBibleDataLayer } from '../../src/data/hebrewBible/index.js';
 import { buildSearchIndex, runSearchQuery } from '../../src/search/hebrewBible/index.js';
 
@@ -424,4 +424,5 @@ renderWordPath('word-path-genesis-1-26', genesisOneTwentySixWords);
 renderWordPath('word-path-genesis-1-27', genesisOneTwentySevenWords);
 renderWordPath('word-path-genesis-1-28', genesisOneTwentyEightWords);
 renderWordPath('word-path-genesis-1-29', genesisOneTwentyNineWords);
+renderWordPath('word-path-genesis-1-30', genesisOneThirtyWords);
 renderDetail();
