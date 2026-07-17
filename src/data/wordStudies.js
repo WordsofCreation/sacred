@@ -344,6 +344,38 @@ function createGenesis126Study({ slug, hebrew, transliteration, pronunciation, b
   };
 }
 
+
+function createGenesis127Study({ slug, hebrew, transliteration, pronunciation, basicTranslation, literalSense, root, rootTransliteration, rootMeaning, grammar, theme, breakdown }) {
+  return {
+    slug,
+    hebrew,
+    transliteration,
+    pronunciation,
+    passage: 'Genesis 1:27',
+    basicTranslation,
+    literalSense,
+    root,
+    rootTransliteration,
+    rootMeaning,
+    grammar,
+    spiritualTheme: theme,
+    relatedVerses: ['Genesis 1:26', 'Genesis 1:27', 'Genesis 2:7', 'Genesis 5:1-2', 'Genesis 9:6', 'Galatians 3:28'],
+    breakdown,
+    rootMeanings: [rootMeaning, 'Read in Genesis 1:27 according to the word’s immediate grammar and creation context.', 'The study keeps image-language, humanity, and male-and-female wording close to the verse itself.'],
+    biblicalUsage: [{ form: hebrew, sense: basicTranslation + '.' }, { form: 'Genesis 1:27', sense: 'God creates humanity in the divine image, expressed in male and female human life.' }],
+    occurrences: [{ form: hebrew, reference: 'Genesis 1:27', book: 'genesis', chapter: 1, verse: 27, occurrence: 1, context: 'וַיִּבְרָא אֱלֹהִים אֶת־הָאָדָם בְּצַלְמוֹ בְּצֶלֶם אֱלֹהִים בָּרָא אֹתוֹ זָכָר וּנְקֵבָה בָּרָא אֹתָם', note: 'This word belongs to the compact poetic report of humanity’s creation in Genesis 1:27.' }],
+    spiritualThemes: ['Human dignity grounded in divine creation', 'Image language repeated for emphasis', 'Human difference held within one created humanity', 'Creation as gift before vocation'],
+    rootStudyNote: 'This study stays close to Genesis 1:27 and avoids using the grammar alone to settle broader theological debates beyond the verse’s clear emphasis on divine image and human creation.',
+    grammarNotes: ['Genesis 1:27 repeats ברא three times, giving the verse a solemn poetic rhythm.', 'The verse moves from humanity collectively to male and female wording.', 'Hebrew maqaf phrases are treated here as readable word-study units for the landing path.'],
+    usageNote: `In Genesis 1:27, ${hebrew} helps proclaim humanity’s creation in God’s image with careful poetic emphasis.`,
+    spiritualIntro: ['Genesis 1:27 turns divine intention into fulfilled creation.', `${hebrew} invites reverence for every human person as created before God.`],
+    messiahConnections: ['Colossians 1:15 — Christian readers identify Messiah as the image of the invisible God.', '2 Corinthians 4:4-6 — image and light language meet in the knowledge of God’s glory.', 'Galatians 3:28 — Christian readers reflect on human unity in Messiah without erasing embodied life.'],
+    messiahReflection: 'For Christian readers, Genesis 1:27 can be contemplated alongside Messiah as the true image who restores human vocation, while the verse itself celebrates God creating humanity in the divine image.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'Let the word become a prayer for honoring the image of God in oneself, in neighbors, and in those who are easy to overlook.'],
+    reflectionQuestions: ['How does this word shape my reverence for human life?', 'Where do I need to see image before category or usefulness?', 'How does the repeated creation language slow my reading?', 'What kind of humility does created dignity require?', 'How might Messiah shape Christian reflection on image-bearing humanity?'],
+  };
+}
+
 export const wordStudies = [
   {
     slug: 'bereshit',
@@ -4925,6 +4957,17 @@ export const wordStudies = [
   },
 
 
+
+
+  createGenesis127Study({ slug: 'et-haadam', hebrew: 'אֶת־הָאָדָם', transliteration: 'et-haadam', pronunciation: 'et-hah-ah-DAHM', basicTranslation: 'The human / the man', literalSense: 'direct-object marker with the human', root: 'אדם', rootTransliteration: 'adam', rootMeaning: 'Humanity, human being; wordplay related to ground/redness', grammar: 'אֶת־הָאָדָם combines the object marker אֶת with the article הָ and אָדָם, marking humanity as the object God creates.', theme: 'Humanity is directly named as God’s created image-bearer.', breakdown: [{ part: 'אֶת־', meaning: 'Direct-object marker', function: 'Marks the object of God’s creating.' }, { part: 'הָאָדָם', meaning: 'The human / humanity', function: 'Names the human creature collectively in the verse.' }] }),
+  createGenesis127Study({ slug: 'betsalmo', hebrew: 'בְּצַלְמוֹ', transliteration: 'betsalmo', pronunciation: 'beh-tsahl-MOH', basicTranslation: 'In His image', literalSense: 'in his image', root: 'צלם', rootTransliteration: 'tselem', rootMeaning: 'Image, representation', grammar: 'בְּצַלְמוֹ joins the preposition בְּ to צֶלֶם with a third masculine singular suffix, “his image.”', theme: 'The divine image is the defining frame for human creation.', breakdown: [{ part: 'בְּ', meaning: 'In / by / according to', function: 'Introduces the image pattern.' }, { part: 'צַלְמוֹ', meaning: 'His image', function: 'Names the image belonging to God in context.' }] }),
+  createGenesis127Study({ slug: 'betselem', hebrew: 'בְּצֶלֶם', transliteration: 'betselem', pronunciation: 'beh-TSEH-lem', basicTranslation: 'In the image', literalSense: 'in image / in an image', root: 'צלם', rootTransliteration: 'tselem', rootMeaning: 'Image, representation', grammar: 'בְּצֶלֶם is the preposition בְּ attached to צֶלֶם, repeating and clarifying the image language of the verse.', theme: 'Humanity is described through repeated image language for emphasis.', breakdown: [{ part: 'בְּ', meaning: 'In / by / according to', function: 'Marks relation to the image.' }, { part: 'צֶלֶם', meaning: 'Image', function: 'Names the pattern in which humanity is created.' }] }),
+  createGenesis127Study({ slug: 'oto', hebrew: 'אֹתוֹ', transliteration: 'oto', pronunciation: 'oh-TOH', basicTranslation: 'Him / it', literalSense: 'him, it, that one', root: 'את', rootTransliteration: 'et', rootMeaning: 'Object marker / pronominal object form', grammar: 'אֹתוֹ is the object-marker/pronominal form with a third masculine singular suffix, referring back to the human in the verse.', theme: 'The collective human is presented as the object of God’s creating act.', breakdown: [{ part: 'אֹתוֹ', meaning: 'Him / it', function: 'Refers back to humanity as the object God created.' }] }),
+  createGenesis127Study({ slug: 'zakhar', hebrew: 'זָכָר', transliteration: 'zakhar', pronunciation: 'zah-KHAR', basicTranslation: 'Male', literalSense: 'male', root: 'זכר', rootTransliteration: 'zakhar', rootMeaning: 'Male; also a separate verb root can mean to remember', grammar: 'זָכָר is a masculine noun/adjective naming male human life in the paired phrase “male and female.”', theme: 'Embodied human difference is included within created humanity.', breakdown: [{ part: 'זָכָר', meaning: 'Male', function: 'Begins the male-and-female pair in Genesis 1:27.' }] }),
+  createGenesis127Study({ slug: 'uneqevah', hebrew: 'וּנְקֵבָה', transliteration: 'uneqevah', pronunciation: 'oo-neh-kay-VAH', basicTranslation: 'And female', literalSense: 'and female', root: 'נקבה', rootTransliteration: 'neqevah', rootMeaning: 'Female', grammar: 'וּנְקֵבָה joins the conjunction וּ to נְקֵבָה, completing the paired expression “male and female.”', theme: 'Female human life is named within the image-bearing humanity God creates.', breakdown: [{ part: 'וּ', meaning: 'And', function: 'Joins the paired human terms.' }, { part: 'נְקֵבָה', meaning: 'Female', function: 'Completes the male-and-female expression.' }] }),
+
+  createGenesis127Study({ slug: 'otam-human', hebrew: 'אֹתָם', transliteration: 'otam', pronunciation: 'oh-TAHM', basicTranslation: 'Them', literalSense: 'them / those ones', root: 'את', rootTransliteration: 'et', rootMeaning: 'Object marker / pronominal object form', grammar: 'אֹתָם is the object-marker/pronominal form with a third masculine plural suffix, referring to male and female humanity in the verse.', theme: 'Humanity in its named difference is gathered together as God’s created image-bearers.', breakdown: [{ part: 'אֹתָם', meaning: 'Them', function: 'Refers back to male and female humanity as the object of God’s creating act.' }] }),
+
   createGenesis126Study({ slug: 'naaseh', hebrew: 'נַעֲשֶׂה', transliteration: 'naaseh', pronunciation: 'nah-ah-SEH', basicTranslation: 'Let us make', literalSense: 'Let us make / we will make', root: 'עשה', rootTransliteration: 'asah', rootMeaning: 'To do, make, accomplish', grammar: 'Qal imperfect/cohortative first common plural from עשה.', theme: 'God’s deliberate counsel before forming humanity.', breakdown: [{ part: 'נַ', meaning: 'First-person plural imperfect prefix', function: 'Marks the speaker as “we / us.”' }, { part: 'עֲשֶׂה', meaning: 'Make / do', function: 'Names the creative action contemplated in the verse.' }] }),
   createGenesis126Study({ slug: 'adam', hebrew: 'אָדָם', transliteration: 'adam', pronunciation: 'ah-DAHM', basicTranslation: 'Humanity / man', literalSense: 'Human being, humankind', root: 'אדם', rootTransliteration: 'adam', rootMeaning: 'Human, humankind; related to ground/redness in Hebrew wordplay', grammar: 'Masculine singular noun often used collectively for humanity.', theme: 'Humanity receives a vocation within creation.', breakdown: [{ part: 'אָדָם', meaning: 'Humanity', function: 'Names the creature God determines to make in the divine image.' }] }),
   createGenesis126Study({ slug: 'betsalmenu', hebrew: 'בְּצַלְמֵנוּ', transliteration: 'betsalmenu', pronunciation: 'beh-tsahl-MAY-noo', basicTranslation: 'In our image', literalSense: 'In our image / according to our image', root: 'צלם', rootTransliteration: 'tselem', rootMeaning: 'Image, representation', grammar: 'Preposition בְּ attached to צֶלֶם with first common plural pronominal suffix.', theme: 'Human life is framed by God-given image and representation.', breakdown: [{ part: 'בְּ', meaning: 'In / by / according to', function: 'Introduces the image pattern.' }, { part: 'צַלְמֵנוּ', meaning: 'Our image', function: 'Names the divine image language of humanity’s vocation.' }] }),
@@ -5020,4 +5063,20 @@ export const genesisOneTwentySixWords = [
   { order: 14, hebrew: 'וּבְכָל־הָרֶמֶשׂ', translation: 'And over every creeping thing', slug: 'uvekhol-haremes', available: true },
   { order: 15, hebrew: 'הָרֹמֵשׂ', translation: 'That creeps', slug: 'haromes', available: true },
   { order: 16, hebrew: 'עַל־הָאָרֶץ', translation: 'Upon the earth', slug: 'al-haaretz', available: true },
+];
+
+
+export const genesisOneTwentySevenWords = [
+  { order: 1, hebrew: 'וַיִּבְרָא', translation: 'And He created', slug: 'vayivra', available: true },
+  { order: 2, hebrew: 'אֱלֹהִים', translation: 'God', slug: 'elohim', available: true },
+  { order: 3, hebrew: 'אֶת־הָאָדָם', translation: 'The human / humanity', slug: 'et-haadam', available: true },
+  { order: 4, hebrew: 'בְּצַלְמוֹ', translation: 'In His image', slug: 'betsalmo', available: true },
+  { order: 5, hebrew: 'בְּצֶלֶם', translation: 'In the image', slug: 'betselem', available: true },
+  { order: 6, hebrew: 'אֱלֹהִים', translation: 'God', slug: 'elohim', available: true },
+  { order: 7, hebrew: 'בָּרָא', translation: 'He created', slug: 'bara', available: true },
+  { order: 8, hebrew: 'אֹתוֹ', translation: 'Him / it', slug: 'oto', available: true },
+  { order: 9, hebrew: 'זָכָר', translation: 'Male', slug: 'zakhar', available: true },
+  { order: 10, hebrew: 'וּנְקֵבָה', translation: 'And female', slug: 'uneqevah', available: true },
+  { order: 11, hebrew: 'בָּרָא', translation: 'He created', slug: 'bara', available: true },
+  { order: 12, hebrew: 'אֹתָם', translation: 'Them', slug: 'otam-human', available: true },
 ];
