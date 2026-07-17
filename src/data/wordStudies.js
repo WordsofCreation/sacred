@@ -376,6 +376,15 @@ function createGenesis127Study({ slug, hebrew, transliteration, pronunciation, b
   };
 }
 
+
+
+export const genesisTwoOneWords = [
+  { order: 1, hebrew: 'וַיְכֻלּוּ', translation: 'And were completed', slug: 'vayekhulu', available: true },
+  { order: 2, hebrew: 'הַשָּׁמַיִם', translation: 'The heavens', slug: 'hashamayim', available: true },
+  { order: 3, hebrew: 'וְהָאָרֶץ', translation: 'And the earth', slug: 'vehaaretz', available: true },
+  { order: 4, hebrew: 'וְכָל־צְבָאָם', translation: 'And all their host', slug: 'vekhol-tzevaam', available: true },
+];
+
 export const wordStudies = [
   {
     slug: 'bereshit',
@@ -5883,6 +5892,65 @@ export const wordStudies = [
     messiahReflection: 'For Christian readers, the sixth day can be contemplated as leading toward Sabbath rest, a theme later read in relation to Messiah, while the Genesis word itself marks the ordered completion of creation’s sixth day.',
     meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'Stand at the edge of the sixth day and let completion become an invitation into trustful rest.'],
     reflectionQuestions: ['What needs completion before rest in my life?', 'How does ordered time teach trust?', 'Where do I resist the boundary between work and rest?', 'How can the sixth day prepare my heart for Sabbath?', 'How might Messiah shape Christian reflection on true rest?'],
+  },
+
+
+  {
+    slug: 'vayekhulu',
+    hebrew: 'וַיְכֻלּוּ',
+    transliteration: 'Vayekhulu',
+    pronunciation: 'vai-yeh-khoo-LOO',
+    passage: 'Genesis 2:1',
+    basicTranslation: 'And were completed',
+    literalSense: 'and they were brought to completion',
+    root: 'כלה',
+    rootTransliteration: 'kalah',
+    rootMeaning: 'to complete, finish, bring to an end',
+    grammar: 'A waw-consecutive verbal form in the plural, opening Genesis 2:1 by declaring the heavens and earth completed.',
+    spiritualTheme: 'God’s creative work moves toward completion, not endless striving.',
+    relatedVerses: ['Genesis 2:1', 'Genesis 2:2-3', 'Exodus 20:11', 'Psalm 33:6', 'John 19:30', 'Hebrews 4:9-10'],
+    breakdown: [{ part: 'וַ־', meaning: 'and / then', function: 'Connects the verse to the completed creation sequence.' }, { part: 'יְכֻלּוּ', meaning: 'were completed', function: 'States that the heavens and earth reached completion.' }],
+    rootMeanings: ['completion', 'finishing', 'bringing to an end', 'readiness for rest'],
+    biblicalUsage: [{ form: 'כלה', sense: 'to finish, complete, come to an end' }, { form: 'Genesis 2:1', sense: 'The heavens, earth, and their host are completed.' }],
+    occurrences: [{ form: 'וַיְכֻלּוּ', reference: 'Genesis 2:1', book: 'genesis', chapter: 2, verse: 1, occurrence: 1, context: 'וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם', note: 'This opening verb announces the completion of the ordered creation described in Genesis 1.' }],
+    spiritualThemes: ['Completion belongs to God’s ordered work.', 'The verse prepares the reader for Sabbath rest.', 'Creation is not unfinished chaos but ordered fullness.', 'Faithful work can move toward holy ceasing.', 'The completed world is received before it is used.'],
+    rootStudyNote: 'The root כלה can speak of finishing or completion. In Genesis 2:1 the context is not exhaustion but the successful completion of creation.',
+    grammarNotes: ['The verb is plural because its subject is the heavens, the earth, and their host.', 'The verse functions as a summary conclusion to Genesis 1.', 'Completion language leads directly into God’s seventh-day rest in Genesis 2:2-3.'],
+    usageNote: 'In Genesis 2:1, וַיְכֻלּוּ announces that the creation work has reached completion and is ready for Sabbath blessing.',
+    spiritualIntro: ['Genesis 2:1 gathers the whole creation week into one quiet statement of completion.', 'וַיְכֻלּוּ invites the reader to release endless striving and receive the world as completed gift before God.'],
+    messiahConnections: ['John 19:30 — Christian readers hear Jesus’ “It is finished” as completion language in a different redemptive context.', 'Hebrews 4:9-10 — Sabbath rest is contemplated as a continuing promise.', 'Colossians 1:16-17 — creation is held together in Messiah.'],
+    messiahReflection: 'For Christian readers, the completion of creation may be contemplated alongside Messiah’s completed redemptive work, while Genesis 2:1 itself speaks first of the finished heavens and earth.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'Let completion become an invitation to trust the Creator who knows when work is finished.'],
+    reflectionQuestions: ['Where do I resist receiving completion as a gift?', 'How does Genesis 2:1 prepare me for rest?', 'What work needs faithful completion rather than anxious extension?', 'How can I honor the finished creation with care?', 'How might Messiah shape Christian reflection on completion and rest?'],
+  },
+
+  {
+    slug: 'vekhol-tzevaam',
+    hebrew: 'וְכָל־צְבָאָם',
+    transliteration: 'Vekhol-tzevaam',
+    pronunciation: 'veh-khol tseh-vah-AM',
+    passage: 'Genesis 2:1',
+    basicTranslation: 'And all their host',
+    literalSense: 'and all their army / ordered host',
+    root: 'כל / צבא',
+    rootTransliteration: 'kol / tzava',
+    rootMeaning: 'all, every / host, army, ordered array',
+    grammar: 'A waw-prefixed phrase joining כָּל with צְבָאָם, “their host,” referring to the full ordered array belonging to the heavens and earth.',
+    spiritualTheme: 'The completed creation is full, ordered, and gathered under God’s command.',
+    relatedVerses: ['Genesis 2:1', 'Deuteronomy 4:19', 'Nehemiah 9:6', 'Psalm 33:6', 'Isaiah 40:26', 'Colossians 1:16'],
+    breakdown: [{ part: 'וְ־', meaning: 'and', function: 'Adds the host to the heavens and the earth.' }, { part: 'כָל־', meaning: 'all / every', function: 'Emphasizes totality.' }, { part: 'צְבָאָם', meaning: 'their host', function: 'Names the ordered array belonging to heavens and earth.' }],
+    rootMeanings: ['all', 'host', 'ordered array', 'fullness of creation'],
+    biblicalUsage: [{ form: 'צָבָא', sense: 'host, army, organized company' }, { form: 'Genesis 2:1', sense: 'The heavens and earth are complete with all their host.' }, { form: 'Psalm 33:6', sense: 'The host of heaven is associated with God’s creative word.' }],
+    occurrences: [{ form: 'וְכָל־צְבָאָם', reference: 'Genesis 2:1', book: 'genesis', chapter: 2, verse: 1, occurrence: 1, context: 'וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם', note: 'This phrase gathers the full ordered host of the heavens and the earth into the completion statement.' }],
+    spiritualThemes: ['God orders creation in fullness.', 'Nothing in the host of heaven or earth stands outside the Creator’s care.', 'Totality language encourages humility before the vast created order.', 'The ordered host prepares for Sabbath rest.', 'The world is a creation to steward, not a power to worship.'],
+    rootStudyNote: 'צָבָא can mean army or host. In Genesis 2:1 it is best read broadly as the ordered array of the heavens and earth rather than as military conflict.',
+    grammarNotes: ['וְ connects this phrase to the heavens and earth.', 'כָל marks totality.', 'The pronominal ending in צְבָאָם points back to the heavens and the earth.'],
+    usageNote: 'In Genesis 2:1, וְכָל־צְבָאָם completes the summary by including the whole ordered host of creation.',
+    spiritualIntro: ['Genesis 2:1 does not leave creation vague or empty.', 'וְכָל־צְבָאָם invites contemplation of the whole ordered array gathered before the Creator.'],
+    messiahConnections: ['Colossians 1:16 — Christian readers contemplate visible and invisible orders created through and for Messiah.', 'Hebrews 1:3 — the Son is described as sustaining all things.', 'Revelation 5:13 — every creature joins worship in John’s vision.'],
+    messiahReflection: 'For Christian readers, the host of creation may be contemplated alongside Messiah’s lordship over all things, while Genesis 2:1 itself emphasizes creation’s completed fullness.',
+    meditationIntro: ['This meditation is offered as contemplative reflection rather than strict grammar.', 'Let the phrase widen attention from one creature to the whole ordered host sustained by God.'],
+    reflectionQuestions: ['How does creation’s vast host teach humility?', 'Where am I tempted to treat created powers as ultimate?', 'How can totality language deepen worship of the Creator?', 'What practices help me steward rather than possess creation?', 'How might Messiah shape Christian contemplation of all things?'],
   },
 
 ];
