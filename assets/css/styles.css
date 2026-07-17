@@ -818,8 +818,95 @@ input[type='search'] {
   max-width: 48rem;
 }
 
+.verse-pagination-card {
+  display: grid;
+  gap: 1.25rem;
+  align-items: end;
+  margin-top: 1rem;
+}
+
+.verse-pagination-card h3 {
+  color: var(--word-text);
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  margin: 0.2rem 0 0.45rem;
+}
+
+.verse-pagination-summary {
+  margin: 0;
+}
+
+.verse-pagination-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.7rem;
+}
+
+.verse-page-select-label {
+  color: var(--word-gold);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.verse-page-select,
+.verse-page-button {
+  min-height: 2.9rem;
+  border: 1px solid rgba(231, 193, 109, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.055);
+  color: var(--word-text);
+  font: inherit;
+}
+
+.verse-page-select {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.verse-page-select option {
+  background: #101526;
+  color: var(--word-text);
+}
+
+.verse-page-button {
+  cursor: pointer;
+  padding: 0 1.1rem;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.verse-page-button:hover:not(:disabled),
+.verse-page-button:focus-visible:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: rgba(231, 193, 109, 0.72);
+  background: rgba(231, 193, 109, 0.12);
+}
+
+.verse-page-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
 .genesis-word-section {
   margin-top: 1rem;
+}
+
+.genesis-word-section[hidden] {
+  display: none;
+}
+
+.genesis-word-section.is-current-verse {
+  animation: versePageIn 220ms ease-out;
+}
+
+@keyframes versePageIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .genesis-word-section h3,
@@ -985,6 +1072,15 @@ input[type='search'] {
 @media (max-width: 700px) {
   .words-page {
     border-radius: 0;
+  }
+
+  .verse-pagination-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .verse-pagination-controls {
+    grid-template-columns: auto auto minmax(9rem, 12rem) auto;
+    align-items: center;
   }
 
   .word-path-card {
